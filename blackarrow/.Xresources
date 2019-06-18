@@ -1,0 +1,35 @@
+! Color scheme
+*.background: #070723
+*.foreground: #226ebf
+
+! black
+*.color0:     #070723
+*.color8:     #354274
+
+! red
+*.color1:     #900909
+*.color9:	  #900909
+
+! green
+*.color2:     #28d165
+*.color10:    #28d165
+
+! yellow
+*.color3:     #ce621c
+*.color11:    #ce621c
+
+! blue
+*.color4:	  #226ebf
+*.color12:	  #226ebf
+
+! magenta
+*.color5:     #71319b
+*.color13:    #71319b
+
+! cyan
+*.color6:     #2a9392
+*.color14:    #2a9392
+
+! white
+*.color7:     #dbdbdb
+*.color15:    #dbdbdb

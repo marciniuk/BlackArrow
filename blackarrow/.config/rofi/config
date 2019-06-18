@@ -1,0 +1,12 @@
+rofi.font: DejaVu Sans Mono 12
+rofi.bw: 2
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #070725, #226ebf, #070725
+rofi.color-normal: #070725, #226ebf, #070725, #226ebf, #070725
+rofi.color-urgent: #070725, #226ebf, #070725, #070725, #226ebf
+rofi.color-active: #070725, #226ebf, #070725, #070725, #226ebf
+/* vim:ft=css
