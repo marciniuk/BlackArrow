@@ -113,7 +113,6 @@
 #########
 ## ??? ##
 #########
-#	USER=Adrian
 	EDITOR=nvim
 	TERMINAL=termite
 	BROWSER=google-chrome
