@@ -7,5 +7,9 @@ then
 		*) exit 0
 	esac
 else
-	google-chrome-stable
+	case "$(printf "Chrome\nChrome Incognito\nCancel" | dmenu -i -p ' Run: ')" in
+		Chrome)             google-chrome-stable;;
+		"Chrome Incognito") google-chrome-stable --incognito;;
+		*) exit 0
+	esac
 fi
