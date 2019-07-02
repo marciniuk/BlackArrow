@@ -292,7 +292,7 @@
 
 	# Texting (WS4) #
 		assign [class="TelegramDesktop"] workspace $ws4
-		assign [class="Caprine"] workspace $ws4
+		assign [class="Riot"] workspace $ws4
 
 	# Graphics (WS5) #
 		assign [class="Gimp"] workspace $ws5
@@ -343,11 +343,11 @@
 	bindsym $Mod+c exec --no-startup-id ~/.scripts/app/chrome.sh
 	bindsym $Mod+Shift+c exec --no-startup-id google-chrome-stable --incognito
 	bindsym $Mod+f exec --no-startup-id ~/.scripts/app/applications.sh caprine
-	bindsym $Mod+t exec --no-startup-id ~/.scripts/app/now-open.sh telegram-desktop
+	bindsym $Mod+t exec --no-startup-id ~/.scripts/app/dmenu-messengers.sh
 	bindsym $Moe+w exec --no-startup-id networkmanager_dmenu
 	bindsym $Moe+Shift+w exec --no-startup-id nmcli d wifi &> /dev/null && networkmanager_dmenu
 	bindsym $Mod+p exec --no-startup-id ~/.scripts/app/applications.sh thunar
-	bindsym $Mod+s exec --no-startup-id ~/.scripts/app/applications.sh spotify
+	bindsym $Mod+s exec --no-startup-id ~/.scripts/app/AppForS.sh
 	bindsym $Mod+g exec --no-startup-id ~/.scripts/app/now-open.sh gimp
 	bindsym $Mod+b exec --no-startup-id calibre
 	bindsym $Moe+Shift+p exec --no-startup-id com.github.ronnydo.colorpicker
