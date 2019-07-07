@@ -3,7 +3,11 @@
 if pgrep -x chrome
 then
 	case "$(printf " Yes\n No" | dmenu -i -p 'Do you want to open another window?')" in
-		" Yes") google-chrome-stable;;
+		" Yes") case "$(printf "Chrome\nChrome Incognito\nCancel" | dmenu -i -p ' Run: ')" in
+		         	Chrome)             google-chrome-stable;;
+		         	"Chrome Incognito") google-chrome-stable --incognito;;
+		         	*) exit 0
+		         esac;;
 		*) exit 0
 	esac
 else

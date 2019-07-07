@@ -27,5 +27,6 @@ then
 	###3
 else
  	echo "!!"
+	killall wificheck.sh && sleep 1
 	~/.scripts/wificheck.sh &> /dev/null & disown:
 fi
