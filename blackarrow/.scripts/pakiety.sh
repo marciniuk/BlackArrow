@@ -1,5 +1,7 @@
 #!/bin/bash
 
+killall wificheck.sh &> /dev/null
+
 if ping -w 1 archlinux.org &> /dev/null
 then
 	#1
@@ -27,6 +29,5 @@ then
 	###3
 else
  	echo "!!"
-	killall wificheck.sh && sleep 1
 	~/.scripts/wificheck.sh &> /dev/null & disown:
 fi
