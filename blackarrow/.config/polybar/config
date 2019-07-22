@@ -61,7 +61,7 @@ monitor-strict   = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 modules-left   = i3
 modules-center =
-modules-right  = wireless-network sym volume sym4 backlight sym clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
+modules-right  = wireless-network sym volume sym4 backlight backlightSET sym clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;tray-position	= right
@@ -604,6 +604,32 @@ type = custom/script
 exec       = echo " "
 label      = %output%
 click-left = i3 restart
+
+
+;~~~~~~~~~~~~~~~
+; set backlight
+;~~~~~~~~~~~~~~~
+[module/backlightSET]
+type = custom/script
+
+exec        = echo " "
+label       = %output%
+click-left  = light -A 100
+click-right = light -U 100 && sleep 0,4 && light -A 10
+
+[module/backlightUP]
+type = custom/script
+
+exec       = echo " "
+label      = %output%
+click-left = light -A 100
+
+[module/backlightDOWN]
+type = custom/script
+
+exec       = echo " "
+label      = %output%
+click-left = light -U 100 && sleep 0,2 && light -A 10
 
 
 ;~~~~~
