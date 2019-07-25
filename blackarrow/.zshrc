@@ -63,6 +63,9 @@
 	# Grive #
 		alias dysk='cd ~/Pliki/grive && grive && cd -'
 
+	# Update #
+		alias update='yay -Syu |& tee -a ~/.yay-log/seen/"$(date +%Y-%m-%d\ %H:%M:%S)".log && xdotool key "super+bracketright"'
+
 	# NoName #
 		alias sudo='sudo '
 		alias random='./.scripts/random.out'
