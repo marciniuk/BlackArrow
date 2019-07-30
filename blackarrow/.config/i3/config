@@ -334,6 +334,7 @@
 	bindsym $Mod+$Moe+v exec --no-startup-id ~/.scripts/files.sh
 	bindsym $Mod+$Moe+w exec --no-startup-id ~/.scripts/wallpaper.sh
 	bindsym $Mod+$Moe+e exec --no-startup-id ~/.scripts/dmenu-unicode.sh
+	bindsym $Mod+$Moe+b exec --no-startup-id ~/.scripts/backlight.sh
 
 
 #########################

@@ -60,6 +60,7 @@ Data=$(date +%d-%m-%G\ %H:%M:%S)
 	cp -r /usr/share/sddm/themes/chili/ ~/BlackArrowGit/blackarrow/
 	cp ~/.config/compton.conf ~/BlackArrowGit/blackarrow/.config/
 	cp /etc/X11/xorg.conf.d/30-touchpad.conf ~/BlackArrowGit/blackarrow/
+	cp /etc/systemd/logind.conf ~/BlackArrowGit/blackarrow/
 		##personalizacja
 	cp -r ~/.themes ~/BlackArrowGit/blackarrow/
 	cp -r /usr/share/backgrounds ~/BlackArrowGit/blackarrow/
