@@ -7,29 +7,29 @@
 	calendar {
 	    	font-family: "DejaVu Sans Mono for Powerline";
 	}
-	
+
 	/* Calendar week, day label */
-	calendar.highlight 
+	calendar.highlight
 	{
 		background-color: #09091E;
 		color: #226EBF;
 		font-weight: bolder;
 	}
-	
+
 	/*Calendar content*/
 	calendar.view
 	{
 		background-color: #09091e;
 		text-align: right;
 	}
-	
+
 	/* day selected */
 	calendar:selected
 	{
 		background-color: #226EBF;
 		color: #090925;
 	}
-	
+
 	/* Month and year */
 	calendar.header
 	{
