@@ -614,8 +614,8 @@ type = custom/script
 
 exec        = echo " "
 label       = %output%
-click-left  = light -A 100
-click-right = light -U 100 && sleep 0,4 && light -A 10
+click-left  = light -S 100
+click-right = light -S 10
 
 [module/backlightUP]
 type = custom/script
