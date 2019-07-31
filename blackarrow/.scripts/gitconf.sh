@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Data=$(date +%d-%m-%G\ %H:%M:%S)
+Data=$(date +%G-%m-%d\ %H:%M:%S)
 
 ################################################
 # Symulowanie obrazowania wykonywania operacji #
