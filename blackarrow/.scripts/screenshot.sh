@@ -13,12 +13,12 @@ mkdir "$(xdg-user-dir PICTURES)"/.OldScreenShots/
 
 		" Quick") sleep 0.5 && maim -u "$(xdg-user-dir PICTURES)"/ScreenShots/"$(date +%G-%m-%d\ %H:%M:%S.png)"
 		           notify-send -i "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')" "ScreenShot saved."
-				   exit 0;;
+		           exit 0;;
 
 		" Quick+copy") sleep 0.5 && maim -u "$(xdg-user-dir PICTURES)"/ScreenShots/"$(date +%G-%m-%d\ %H:%M:%S.png)"
 		                xclip -selection clipboard -t image/png "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')"
 		                notify-send -i "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')" "ScreenShot copied and saved."
-						exit 0;;
+		                exit 0;;
 		" Advanced")
 			#~~~~~~~~~~~~~~~#
 			# dmenu prompts #
@@ -45,7 +45,7 @@ mkdir "$(xdg-user-dir PICTURES)"/.OldScreenShots/
 				         exit 0;;
 				*)       sleep "$TIME" && maim $FLAG "$(xdg-user-dir PICTURES)"/ScreenShots/"$(date +%G-%m-%d\ %H:%M:%S.png)"
 				         notify-send -i "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')" "ScreenShot saved."
-						 exit 0
+				         exit 0
 			esac;;
 
 		clear)
@@ -55,3 +55,4 @@ mkdir "$(xdg-user-dir PICTURES)"/.OldScreenShots/
 
 		*) exit 0
 	esac
+
