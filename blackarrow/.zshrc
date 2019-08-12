@@ -71,8 +71,6 @@
 		alias random='./.scripts/random.out'
 		alias honor9='nmcli device wifi connect Honor9 password adek4821'
 		alias woman='man'
-		alias edex='cd ~/.edex-ui && npm start && cd ~/'
-		alias mame='ssh malgorzata@192.168.8.102'
 
 	# Youtube-dl #
 		alias yt-dl='youtube-dl'
