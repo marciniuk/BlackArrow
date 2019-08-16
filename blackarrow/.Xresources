@@ -8,7 +8,7 @@
 
 ! red
 *.color1:     #900909
-*.color9:	  #900909
+*.color9:     #900909
 
 ! green
 *.color2:     #28d165
@@ -19,8 +19,8 @@
 *.color11:    #ce621c
 
 ! blue
-*.color4:	  #226ebf
-*.color12:	  #226ebf
+*.color4:     #226ebf
+*.color12:    #226ebf
 
 ! magenta
 *.color5:     #71319b
