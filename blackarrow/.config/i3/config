@@ -343,7 +343,7 @@
 	bindsym $Mod+Return exec $terminal
 	bindsym $Mod+c exec --no-startup-id ~/.scripts/app/chrome.sh
 	bindsym $Mod+f exec --no-startup-id ~/.scripts/app/applications.sh caprine
-	bindsym $Mod+t exec --no-startup-id ~/.scripts/app/dmenu-messengers.sh
+	bindsym $Mod+t exec --no-startup-id telegram-desktop
 	bindsym $Moe+w exec --no-startup-id networkmanager_dmenu
 	bindsym $Moe+Shift+w exec --no-startup-id nmcli d wifi &> /dev/null && networkmanager_dmenu
 	bindsym $Mod+p exec --no-startup-id ~/.scripts/app/applications.sh thunar

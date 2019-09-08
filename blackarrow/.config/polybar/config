@@ -61,7 +61,7 @@ monitor-strict   = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 modules-left   = i3
 modules-center =
-modules-right  = wireless-network sym volume sym4 backlight backlightSET sym clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
+modules-right  = wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;tray-position	= right
@@ -196,6 +196,35 @@ ramp-7  = 
 ramp-8  = 
 ramp-9  = 
 ramp-10 = 
+
+
+;~~~~~~~~~~~~~~~~
+; Backlight-menu
+;~~~~~~~~~~~~~~~~
+[module/backlight-menu]
+type= custom/menu
+
+label-open          = 
+label-open-padding  = 1
+label-close         = 
+label-close-padding = 1
+
+menu-0-0         = 25%
+menu-0-0-exec    = light -S 25
+menu-0-0-padding = 0
+
+menu-0-1         = 50%
+menu-0-1-exec    = light -S 50
+menu-0-1-padding = 1
+
+menu-0-2         = 75%
+menu-0-2-exec    = light -S 75
+menu-0-2-padding = 0
+
+menu-0-3         = 100%
+menu-0-3-exec    = light -S 100
+menu-0-3-padding = 1
+
 
 ;~~~~~~~~~~~~~~
 ; Date + Clock
