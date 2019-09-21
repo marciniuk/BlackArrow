@@ -111,6 +111,9 @@
 	# Biual #
 		alias biual='cd ~/ && git clone https://gitlab.com/dawidpotocki/biual'
 
+	# Pacman #
+		alias oldtg='sudo pacman -U /home/adrian/Pliki/Pakiety/telegram-desktop-1.8.4-1-x86_64.pkg.tar.xz'
+
 #########
 ## ??? ##
 #########
