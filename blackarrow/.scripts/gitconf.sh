@@ -5,7 +5,6 @@ Data=$(date +%G-%m-%d\ %H:%M:%S)
 ################################################
 # Symulowanie obrazowania wykonywania operacji #
 ################################################
-
 	sleep 0.2
 	echo "
 	Copying files:
@@ -31,19 +30,19 @@ Data=$(date +%G-%m-%d\ %H:%M:%S)
 	sleep 0.2
 	echo -ne "	[#########-] 90%\r\c"
 
+
 ################################################################################
 # Tworzenie folderu z aktualną datą + przenoszenie + tworzenie nowych folderów #
 ################################################################################
-
 	mkdir ~/.BlackArrowGit/Kopia\ "$Data" && mv -n ~/BlackArrowGit/blackarrow ~/.BlackArrowGit/Kopia\ "$Data"
 	mkdir -p ~/BlackArrowGit/blackarrow/.config/
 	cp -r ~/.config/dmenu ~/BlackArrowGit/blackarrow/.config/
 	sudo rm -r ~/blackarrow/.config/dmenu/.git &> /dev/null
 
+
 ############################
 # Kopiowanie nowych plików #
 ############################
-
 	#kopiowanie
 		##configi
 	cp -r ~/.config/qt5ct ~/BlackArrowGit/blackarrow/.config/
@@ -82,10 +81,10 @@ Data=$(date +%G-%m-%d\ %H:%M:%S)
 	rm -r ~/BlackArrowGit/blackarrow/.scripts/test
 	rm ~/BlackArrowGit/blackarrow/.scripts/BA-Installer.sh
 
+
 ##################################################
 # Symulowanie obrazowania wykonywania operacji 2 #
 ##################################################
-
 	echo -ne "	[##########] 100%\r\c"
 	echo -ne "\n"
 	sleep 0.2
