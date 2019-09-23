@@ -9,8 +9,7 @@
 ######################
 	sleep 0.2
 	echo "
-	Uploading files to GitLab:
-	"
+	Uploading files to GitLab:"
 	sleep 0.2
 
 
