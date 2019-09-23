@@ -55,4 +55,3 @@ mkdir "$(xdg-user-dir PICTURES)"/.OldScreenShots/
 
 		*) exit 0
 	esac
-
