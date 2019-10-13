@@ -485,43 +485,62 @@ type = custom/menu
 
 label-open          = 
 label-open-padding  = 1
-label-close         = 
-label-close-padding = 1
+label-close         = " "
+label-close-padding = 0
 
-menu-0-0         = 
-menu-0-0-exec    = menu-open-1
-menu-0-0-padding = 1
-menu-1-0         = lock?
-menu-1-0-exec    = i3lock -i /usr/share/backgrounds/i3lock.png
-menu-1-0-padding = 1
+menu-0-0         = 
+menu-0-0-exec    = exit
+menu-0-0-padding = 0
 
-menu-0-1         = 
-menu-0-1-exec    = menu-open-2
+menu-0-1         = 
+menu-0-1-exec    = menu-open-1
 menu-0-1-padding = 1
-menu-2-0         = power off?
+menu-1-0         = Lock?
+menu-1-0-exec    = i3lock -i /usr/share/backgrounds/i3lock.png
+menu-1-0-padding = 0
+menu-1-1         = 
+menu-1-1-exec    = exit
+menu-1-1-padding = 1
+
+menu-0-2         = 
+menu-0-2-exec    = menu-open-2
+menu-0-2-padding = 0
+menu-2-0         = Power off?
 menu-2-0-exec    = systemctl -i poweroff
-menu-2-0-padding = 1
+menu-2-0-padding = 0
+menu-2-1         = 
+menu-2-1-exec    = exit
+menu-2-1-padding = 1
 
-menu-0-2         = 
-menu-0-2-exec    = menu-open-3
-menu-0-2-padding = 1
-menu-3-0         = reboot?
-menu-3-0-exec    = reboot
-menu-3-0-padding = 1
-
-menu-0-3         = 
-menu-0-3-exec    = menu-open-4
+menu-0-3         = 
+menu-0-3-exec    = menu-open-3
 menu-0-3-padding = 1
-menu-4-0         = logout?
-menu-4-0-exec    = i3-msg exit
-menu-4-0-padding = 1
+menu-3-0         = Reboot?
+menu-3-0-exec    = reboot
+menu-3-0-padding = 0
+menu-3-1         = 
+menu-3-1-exec    = exit
+menu-3-1-padding = 1
 
-menu-0-4         = 
-menu-0-4-exec    = menu-open-5
-menu-0-4-padding = 1
-menu-5-0         = suspend?
+menu-0-4         = 
+menu-0-4-exec    = menu-open-4
+menu-0-4-padding = 0
+menu-4-0         = Logout?
+menu-4-0-exec    = i3-msg exit
+menu-4-0-padding = 0
+menu-4-1         = 
+menu-4-1-exec    = exit
+menu-4-1-padding = 1
+
+menu-0-5         = 
+menu-0-5-exec    = menu-open-5
+menu-0-5-padding = 1
+menu-5-0         = Suspend?
 menu-5-0-exec    = systemctl suspend
-menu-5-0-padding = 1
+menu-5-0-padding = 0
+menu-5-1         = 
+menu-5-1-exec    = exit
+menu-5-1-padding = 1
 
 
 ;~~~~~~~~~~~~~~~~~
