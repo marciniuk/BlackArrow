@@ -6,8 +6,10 @@ case "$(printf " ~/.yay-log\n ~/.BA\n Cancel" | dmenu -h 33 -i -p 'Are 
 	" ~/.yay-log")
 		echo "	Delete old files in ~/.yay-log:"
 		find .yay-log/* -mtime +30 -print -delete
+			echo ""
 		echo "	Delete old files in ~/.yay-log/seen:"
-		find .yay-log/seen/* -mtime +30 -print -delete;;
+		find .yay-log/seen/* -mtime +30 -print -delete
+			echo "";;
 
 	" ~/.BA")
 		#Configs
