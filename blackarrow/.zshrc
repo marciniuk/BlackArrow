@@ -67,6 +67,7 @@
 		alias update='yay -Syu |& tee -a ~/.yay-log/seen/"$(date +%Y-%m-%d\ %H:%M:%S)".log && xdotool key "super+bracketright"'
 
 	# NoName #
+		alias czyść='./.scripts/fast-cleaning.sh'
 		alias sudo='sudo '
 		alias random='./.scripts/random.out'
 		alias honor9='nmcli device wifi connect Honor9 password adek4821'
