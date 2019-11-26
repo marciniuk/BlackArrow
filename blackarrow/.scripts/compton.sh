@@ -4,7 +4,7 @@ case "$1" in
 	--toggle)
 		if [ "$(pgrep -x compton)" ]
 		then
-    		killall -9 compton
+			killall -9 compton
 		else
 			compton -b
 		fi;;
@@ -12,7 +12,7 @@ case "$1" in
         if [ "$(pgrep -x compton)" ]
 		then
 			echo ""
-    	else
+		else
 			echo "| off "
-        fi;;
+		fi;;
 esac
