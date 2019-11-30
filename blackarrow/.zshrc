@@ -70,7 +70,6 @@
 		alias czyść='./.scripts/fast-cleaning.sh'
 		alias sudo='sudo '
 		alias random='./.scripts/random.out'
-		alias honor9='nmcli device wifi connect Honor9 password adek4821'
 		alias woman='man'
 
 	# Youtube-dl #
