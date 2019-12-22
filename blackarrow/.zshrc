@@ -55,6 +55,9 @@
 ###########
 # Aliases #
 ###########
+	# SSH #
+		alias gzg='ssh grandzonegaming@51.91.127.178'
+
 	# Vim #
 		alias vi="nvim"
 		alias vim="nvim"
