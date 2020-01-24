@@ -95,7 +95,7 @@
 
 .osd-window, .info-osd, .workspace-osd, .overview-empty-placeholder {
   border: 1px solid #868691;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #dbdbdb; }
 
 .slider, .popup-slider-menu-item, .sound-player .slider {
@@ -108,7 +108,7 @@
   -slider-active-background-color: #1d59a0;
   -slider-active-border-color: #1d5ba3;
   -slider-border-width: 1px;
-  -slider-border-radius: 2px;
+  -slider-border-radius: 1px;
   -slider-handle-radius: 8px;
   -slider-handle-border-color: rgba(34, 110, 191, 0.32); }
 
@@ -121,7 +121,7 @@
 
 #menu-search-entry, #notification StEntry, .run-dialog-entry {
   padding: 5px;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #dbdbdb;
   border: 1px solid rgba(219, 219, 219, 0.22);
   selection-background-color: #226ebf;
@@ -140,12 +140,12 @@
 .calendar-change-month-back, .calendar-change-month-forward {
   width: 16px;
   height: 16px;
-  border-radius: 2px;
+  border-radius: 1px;
   transition-duration: 150; }
 
 .sound-player StButton, .keyboard-key, .notification-button, .notification-icon-button, .modal-dialog-button {
   border: 1px solid rgba(34, 110, 191, 0.32);
-  border-radius: 2px;
+  border-radius: 1px;
   text-align: center;
   color: #226ebf;
   transition-duration: 150; }
@@ -159,7 +159,7 @@
 .menu, .popup-combo-menu {
   padding: 8px;
   border: 1px solid #868691;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #dbdbdb; }
 
 .menu-application-button-label:ltr, .menu-category-button-label:ltr {
@@ -190,7 +190,7 @@
 .menu-applications-inner-box StScrollView, .starkmenu-favorites-box .menu-context-menu, .menu-context-menu {
   padding: 8px;
   margin: 8px 0;
-  border-radius: 2px;
+  border-radius: 1px;
   border: 1px solid rgba(219, 219, 219, 0.22); }
   .menu-applications-inner-box StScrollView StIcon:ltr, .menu-context-menu StIcon:ltr {
     padding-right: 4px; }
@@ -218,7 +218,7 @@
   width: 16px;
   height: 16px;
   background-image: url(assets/radiobutton-off.svg);
-  border-radius: 2px; }
+  border-radius: 1px; }
 
 .tile-preview, .tile-hud {
   background-color: rgba(7, 7, 35, 0.5);
@@ -245,17 +245,17 @@ StScrollBar {
   padding: 2px; }
   StScrollBar StButton#vhandle {
     background-color: #b1b1b6;
-    border-radius: 2px; }
+    border-radius: 1px; }
     StScrollBar StButton#vhandle:hover {
       background-color: #1d59a0; }
   StScrollBar StButton#hhandle {
     background-color: #b1b1b6;
-    border-radius: 2px; }
+    border-radius: 1px; }
     StScrollBar StButton#hhandle:hover {
       background-color: #1d59a0; }
   StScrollBar StBin#trough {
     background-color: #03030e;
-    border-radius: 2px; }
+    border-radius: 1px; }
 
 StScrollView.vfade {
   -st-vfade-offset: 68px; }
@@ -299,7 +299,7 @@ StScrollView StScrollBar {
   padding: 5px 8px;
   color: #dbdbdb;
   text-align: center;
-  border-radius: 2px; }
+  border-radius: 1px; }
 
 .menu {
   min-width: 100px;
@@ -310,7 +310,7 @@ StScrollView StScrollBar {
 
 .popup-sub-menu {
   border: 1px solid rgba(219, 219, 219, 0.22);
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 8px; }
 
 .popup-menu-content {
@@ -321,7 +321,7 @@ StScrollView StScrollBar {
   spacing: .5em; }
   .popup-menu-item:active {
     background-color: #226ebf;
-    border-radius: 2px;
+    border-radius: 1px;
     color: #070723; }
   .popup-menu-item:insensitive {
     font-style: italic; }
@@ -367,7 +367,7 @@ StScrollView StScrollBar {
 .menu-favorites-box {
   padding: 0.8em;
   border: 1px solid rgba(219, 219, 219, 0.22);
-  border-radius: 2px;
+  border-radius: 1px;
   transition-duration: 150;
   spacing: 1em; }
 
@@ -380,7 +380,7 @@ StScrollView StScrollBar {
 
 .menu-favorites-button:hover {
   background-color: #226ebf;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #070723; }
 
 .menu-categories-box {
@@ -388,20 +388,20 @@ StScrollView StScrollBar {
 
 .menu-applications-inner-box {
   padding: 0.8em;
-  border-radius: 2px;
+  border-radius: 1px;
   border: 1px solid rgba(219, 219, 219, 0.22); }
 
 .menu-applications-outer-box {
   padding: 0.8em;
   border: 1px solid rgba(219, 219, 219, 0.22);
-  border-radius: 2px; }
+  border-radius: 1px; }
 
 .menu-application-button:highlighted {
   font-weight: bold; }
 
 .menu-application-button-selected {
   background-color: #226ebf;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #070723; }
   .menu-application-button-selected:highlighted {
     font-weight: bold; }
@@ -412,7 +412,7 @@ StScrollView StScrollBar {
 
 .menu-category-button-selected {
   background-color: #226ebf;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #070723; }
 
 .menu-selected-app-box {
@@ -582,7 +582,7 @@ StScrollView StScrollBar {
 .applet-box {
   color: #dbdbdb;
   transition-duration: 150;
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 0 3px; }
   .applet-box.vertical {
     padding: 3px 0; }
@@ -645,7 +645,7 @@ StScrollView StScrollBar {
   spacing: 3px;
   padding: 1px 3px;
   font-size: 0.9em;
-  border-radius: 2px; }
+  border-radius: 1px; }
   .window-list-box.vertical {
     spacing: 3px;
     padding: 3px 1px; }
@@ -654,7 +654,7 @@ StScrollView StScrollBar {
 
 .window-list-item-box {
   border: 1px solid rgba(219, 219, 219, 0.22);
-  border-radius: 2px;
+  border-radius: 1px;
   transition-duration: 150; }
   .window-list-item-box:hover {
     border: 1px solid #1d5ba3; }
@@ -663,7 +663,7 @@ StScrollView StScrollBar {
   .window-list-item-box .progress {
     background-color: #42ec43;
     border: 1px solid #1d5ba3;
-    border-radius: 2px;
+    border-radius: 1px;
     color: #070729; }
   .window-list-item-box #appMenuIcon {
     padding-right: 0.2em; }
@@ -673,7 +673,7 @@ StScrollView StScrollBar {
   color: #070729; }
 
 .window-list-preview {
-  border-radius: 2px;
+  border-radius: 1px;
   border: 1px solid #868691;
   padding: 6px 12px;
   spacing: 3px;
@@ -713,13 +713,13 @@ StScrollView StScrollBar {
   color: #070729; }
 
 .grouped-window-list-thumbnail-menu {
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 10px 15px;
   spacing: 3px;
   color: #dbdbdb; }
   .grouped-window-list-thumbnail-menu .item-box {
     padding: 8px;
-    border-radius: 2px;
+    border-radius: 1px;
     border: 1px solid rgba(219, 219, 219, 0.22); }
     .grouped-window-list-thumbnail-menu .item-box:outlined {
       border: 1px solid #1d5ba3; }
@@ -741,7 +741,7 @@ StScrollView StScrollBar {
   min-height: 2em;
   padding: 5px;
   color: #226ebf;
-  border-radius: 2px; }
+  border-radius: 1px; }
   .sound-player StButton:small {
     min-width: 1.5em;
     min-height: 1.5em;
@@ -829,7 +829,7 @@ StScrollView StScrollBar {
   color: #dbdbdb;
   font-size: 0.8em;
   padding: 5px 10px;
-  border-radius: 2px;
+  border-radius: 1px;
   font-weight: bold;
   text-align: center; }
 
@@ -864,7 +864,7 @@ StScrollView StScrollBar {
   text-align: center;
   width: 2.4em;
   height: 1.8em;
-  border-radius: 2px; }
+  border-radius: 1px; }
   .calendar-day-base:active {
     background-color: #226ebf; }
 
@@ -922,7 +922,7 @@ StScrollView StScrollBar {
 .keyboard-subkeys {
   color: #dbdbdb;
   padding: 4px;
-  -arrow-border-radius: 2px;
+  -arrow-border-radius: 1px;
   -arrow-background-color: #070723;
   -arrow-border-width: 1px;
   -arrow-border-color: #dbdbdb;
@@ -936,7 +936,7 @@ StScrollView StScrollBar {
     border-width: 0; }
 
 #notification {
-  border-radius: 2px;
+  border-radius: 1px;
   border: 1px solid #868691;
   padding: 8px;
   spacing-rows: 5px;
@@ -974,7 +974,7 @@ StScrollView StScrollBar {
   spacing: 8px; }
 
 .notification-button {
-  border-radius: 2px;
+  border-radius: 1px;
   min-width: 5em;
   min-height: 1em;
   padding: 5px; }
@@ -982,7 +982,7 @@ StScrollView StScrollBar {
     color: #070723; }
 
 .notification-icon-button {
-  border-radius: 2px;
+  border-radius: 1px;
   min-width: 2em;
   min-height: 2em;
   padding: 5px; }
@@ -993,7 +993,7 @@ StScrollView StScrollBar {
 
 .modal-dialog {
   border: 1px solid #868691;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #dbdbdb;
   padding: 16px 20px; }
 
@@ -1027,7 +1027,7 @@ StScrollView StScrollBar {
   border: 1px solid #1d5ba3; }
 
 .run-dialog {
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 16px 20px; }
 
 .cinnamon-mount-operation-icon {
@@ -1109,7 +1109,7 @@ StScrollView StScrollBar {
 
 .about-scrollBox {
   border: 1px solid #868691;
-  border-radius: 2px; }
+  border-radius: 1px; }
 
 .about-scrollBox-innerBox {
   padding: 1.2em;
@@ -1125,47 +1125,47 @@ StScrollView StScrollBar {
   spacing: 4px;
   padding: 8px;
   border: 1px solid #868691;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #dbdbdb; }
 
 .desklet {
   font-size: 0.9em;
   padding: 8px;
   color: #dbdbdb;
-  border-radius: 2px;
+  border-radius: 1px;
   background-color: rgba(7, 7, 35, 0.5); }
   .desklet:highlight {
     background-color: #226ebf; }
 
 .desklet-with-borders {
   font-size: 0.9em;
-  border-radius: 2px; }
+  border-radius: 1px; }
   .desklet-with-borders:highlight {
     background-color: #226ebf; }
 
 .desklet-with-borders-and-header {
   font-size: 0.9em;
-  border-radius-bottomleft: 2px;
-  border-radius-bottomright: 2px; }
+  border-radius-bottomleft: 1px;
+  border-radius-bottomright: 1px; }
   .desklet-with-borders-and-header:highlight {
     background-color: #226ebf; }
 
 .desklet-header {
   font-size: 1.2em;
-  border-radius-topleft: 2px;
-  border-radius-topright: 2px; }
+  border-radius-topleft: 1px;
+  border-radius-topright: 1px; }
   .desklet-header:highlight {
     background-color: #226ebf; }
 
 .photoframe-box {
-  border-radius: 2px; }
+  border-radius: 1px; }
   .photoframe-box:highlight {
     background-color: #226ebf; }
 
 .desklet-drag-placeholder {
   border: 2px solid #226ebf;
   background-color: rgba(7, 7, 35, 0.5);
-  border-radius: 2px; }
+  border-radius: 1px; }
 
 .launcher {
   padding: 1px;
@@ -1178,13 +1178,13 @@ StScrollView StScrollBar {
   spacing: 16px; }
 
 .switcher-list {
-  border-radius: 2px;
+  border-radius: 1px;
   border: 1px solid #868691;
   padding: 16px;
   color: #dbdbdb; }
   .switcher-list .item-box {
     padding: 8px;
-    border-radius: 2px; }
+    border-radius: 1px; }
     .switcher-list .item-box:selected {
       color: #070723; }
   .switcher-list .thumbnail-box {
@@ -1204,7 +1204,7 @@ StScrollView StScrollBar {
   background-gradient-direction: horizontal;
   background-gradient-start: #333333;
   background-gradient-end: rgba(51, 51, 51, 0);
-  border-radius: 2px;
+  border-radius: 1px;
   border-radius-topright: 0;
   border-radius-bottomright: 0;
   width: 60px; }
@@ -1213,7 +1213,7 @@ StScrollView StScrollBar {
   background-gradient-direction: horizontal;
   background-gradient-start: rgba(51, 51, 51, 0);
   background-gradient-end: #333333;
-  border-radius: 2px;
+  border-radius: 1px;
   border-radius-topleft: 0;
   border-radius-bottomleft: 0;
   width: 60px; }
@@ -1266,7 +1266,7 @@ StScrollView StScrollBar {
 .window-caption {
   padding: 4px 6px;
   border: 1px solid #868691;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #dbdbdb;
   -cinnamon-caption-spacing: 4px; }
   .window-caption:focus, .window-caption#selected {
@@ -1303,7 +1303,7 @@ StScrollView StScrollBar {
   padding: 4px 6px;
   height: 1.5em;
   border: 1px solid #868691;
-  border-radius: 2px;
+  border-radius: 1px;
   selected-color: #070723;
   selection-background-color: #226ebf;
   color: #dbdbdb;
@@ -1331,7 +1331,7 @@ StScrollView StScrollBar {
 
 .tile-hud:bottom {
   border-bottom-width: 0;
-  border-radius: 2px 2px 0 0; }
+  border-radius: 1px 1px 0 0; }
 
 .tile-hud:left {
   border-left-width: 0;

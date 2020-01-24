@@ -59,7 +59,8 @@
 		alias gzg='ssh grandzonegaming@51.91.127.178'
 		alias gzggnome='gnome-terminal -- ssh grandzonegaming@51.91.127.178'
 		alias gzgpass='gpg --decrypt ~/.password/password'
-		alias gzgserwer='cd ~/grandzonegaming && bundle exec jekyll build && bundle exec jekyll serve --livereload --incremental'
+		alias gzgserwer='cd ~/grandzonegaming && bundle exec jekyll serve --livereload --incremental'
+		alias gzgbuild='bundle exec jekyll build'
 
 	# Vim #
 		alias vi="nvim"
