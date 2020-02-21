@@ -56,9 +56,8 @@
 # Aliases #
 ###########
 	# GZG #
-		alias gzg='ssh grandzonegaming@51.91.127.178'
-		alias gzggnome='gnome-terminal -- ssh grandzonegaming@51.91.127.178'
-		alias gzgpass='gpg --decrypt ~/.password/password'
+		alias gzg='cd ~/grandzonegaming'
+		alias gzgs='cd ~/grandzonegaming/_site'
 		alias gzgserwer='cd ~/grandzonegaming && bundle exec jekyll serve --livereload --incremental'
 		alias gzgbuild='bundle exec jekyll build'
 
