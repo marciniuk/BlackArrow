@@ -59,7 +59,7 @@
 		alias gzg='cd ~/grandzonegaming'
 		alias gzgs='cd ~/grandzonegaming/_site'
 		alias gzgserwer='cd ~/grandzonegaming && bundle exec jekyll serve --livereload --incremental'
-		alias gzgbuild='cd ~/grandzonegaming && bundle exec jekyll build && cp ~/Pliki/Projekty/main.css ~/grandzonegaming/_site/assets/css/main.css'
+		alias gzgbuild='cd ~/grandzonegaming && bundle exec jekyll build'
 
 	# Vim #
 		alias vi="nvim"
