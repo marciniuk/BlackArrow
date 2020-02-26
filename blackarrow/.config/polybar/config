@@ -12,7 +12,7 @@
 ;~~~~~~~~
 [colors]
 
-background  = #070723
+background  = ${xrdb:background}
 foreground  = ${xrdb:foreground}
 moderate    = ${xrdb:color3}
 urgent      = ${xrdb:color1}

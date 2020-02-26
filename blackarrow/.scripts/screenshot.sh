@@ -48,7 +48,7 @@ mkdir "$(xdg-user-dir PICTURES)"/.OldScreenShots/
 				         exit 0
 			esac;;
 
-		clear)
+		clear,czyść)
 			mkdir "$(xdg-user-dir PICTURES)"/.OldScreenShots/"$(date +%G-%m-%d\ %H:%M:%S)"
 			mv "$(xdg-user-dir PICTURES)"/ScreenShots/* "$(find "$(xdg-user-dir PICTURES)"/.OldScreenShots/* -maxdepth 1 | sed '$!d')"
 			notify-send "SSs moved to ~/[Pictures]/.OldScreenShots" && exit 0;;

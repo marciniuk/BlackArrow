@@ -1,10 +1,10 @@
 ! Color scheme
-*.background: #070723
-*.foreground: #226ebf
+*.background: #181b21
+*.foreground: #CCCCCC
 
 ! black
-*.color0:     #070723
-*.color8:     #354274
+*.color0:     #181b21
+*.color8:     #22262E
 
 ! red
 *.color1:     #900909

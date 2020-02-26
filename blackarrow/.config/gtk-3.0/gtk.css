@@ -11,27 +11,27 @@
 	/* Calendar week, day label */
 	calendar.highlight
 	{
-		background-color: #09091E;
-		color: #226EBF;
+		background-color: #22262E;
+		color: #CCCCCC;
 		font-weight: bolder;
 	}
 
 	/*Calendar content*/
 	calendar.view
 	{
-		background-color: #09091e;
+		background-color: #22262E;
 		text-align: right;
 	}
 
 	/* day selected */
 	calendar:selected
 	{
-		background-color: #226EBF;
-		color: #090925;
+		background-color: #cf5252;
+		color: #22262E;
 	}
 
 	/* Month and year */
 	calendar.header
 	{
-		color: #226EBF;
+		color: #CCCCCC;
 	}

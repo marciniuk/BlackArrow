@@ -210,23 +210,23 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background  = "#070729"
-    foreground  = "#226ebf"
-    frame_color = "#226ebf"
+    background  = "#22262E"
+    foreground  = "#CCCCCC"
+    frame_color = "#CCCCCC"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background  = "#070729"
-    foreground  = "#226ebf"
-    frame_color = "#226ebf"
+    background  = "#22262E"
+    foreground  = "#CCCCCC"
+    frame_color = "#CCCCCC"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background  = "#070729"
+    background  = "#22262E"
     foreground  = "#b71616"
     frame_color = "#b71616"
     timeout = 5

@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/adrian/.gtkrc-2.0.mine"
-gtk-theme-name="oomox-BlackArrowTheme3.2"
+gtk-theme-name="oomox-BlackArrowTheme4"
 gtk-icon-theme-name="ePapirus"
 gtk-font-name="Cantarell 9"
 gtk-cursor-theme-name="Vanilla-DMZ"

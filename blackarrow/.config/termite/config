@@ -29,13 +29,13 @@ filter_unmatched_urls = true
 
 [colors]
 # special
-background = #070723
+background = #181b21
 #background = rgba(7, 7, 35, 0.8)
-foreground = #adadad
+foreground = #CCCCCC
 
 # black
-color0 = #070723
-color8  = #161649
+color0 = #181b21
+color8  = #22262E
 
 # red
 color1  = #c62d3f
@@ -62,5 +62,5 @@ color6  = #2a9392
 color14	= #226ebf
 
 # white
-color7  = #c6c6c6
-color15	= #c6c6c6
+color7  = #cccccc
+color15	= #cccccc

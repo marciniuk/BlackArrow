@@ -16,15 +16,15 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 " Airline have something like boxes, where you put plugins. So you have to
 " change colors for all boxes individually. If you don't want to, you don't have
 " to set different colors for different Vim modes, you can just comment them out.
-" 
+"
 " Syntax:
 " let s:p.mode.position    [[ s:foreground, s:background ], [ s:foreground, s:background ]]
 
 " Normal
-let s:p.normal.left =      [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
-let s:p.normal.middle =    [[ s:blue, s:black ], [ s:blue, s:black ], [ s:blue, s:black ]]
-let s:p.normal.right =     [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
-let s:p.normal.error =     [[ s:black, s:blue ]]
+let s:p.normal.left =      [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
+let s:p.normal.middle =    [[ s:white, s:black ], [ s:white, s:black ], [ s:white, s:black ]]
+let s:p.normal.right =     [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
+let s:p.normal.error =     [[ s:black, s:white ]]
 let s:p.normal.warning =   [[ s:black, s:yellow ]]
 
 " Inactive
@@ -33,24 +33,24 @@ let s:p.normal.warning =   [[ s:black, s:yellow ]]
 "let s:p.inactive.right =   [[ s:white, s:black ], [ s:white, s:black ], [ s:white, s:black ]]
 
 " Insert
-"let s:p.insert.left =      [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
-"let s:p.insert.middle =    [[ s:blue, s:black ], [ s:blue, s:black ], [ s:blue, s:black ]]
-"let s:p.insert.right =     [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
+"let s:p.insert.left =      [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
+"let s:p.insert.middle =    [[ s:white, s:black ], [ s:white, s:black ], [ s:white, s:black ]]
+"let s:p.insert.right =     [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
 
 " Replace
-"let s:p.replace.left =     [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
-"let s:p.replace.middle =   [[ s:blue, s:black ], [ s:blue, s:black ], [ s:blue, s:black ]] 
-"let s:p.replace.right =    [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
+"let s:p.replace.left =     [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
+"let s:p.replace.middle =   [[ s:white, s:black ], [ s:white, s:black ], [ s:white, s:black ]]
+"let s:p.replace.right =    [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
 
 " Visual
-"let s:p.visual.left =      [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
-"let s:p.visual.middle =    [[ s:blue, s:black ], [ s:blue, s:black ], [ s:blue, s:black ]]
-"let s:p.visual.right =     [[ s:black, s:blue ], [ s:blue, s:black ], [ s:blue, s:black ]]
+"let s:p.visual.left =      [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
+"let s:p.visual.middle =    [[ s:white, s:black ], [ s:white, s:black ], [ s:white, s:black ]]
+"let s:p.visual.right =     [[ s:black, s:white ], [ s:white, s:black ], [ s:white, s:black ]]
 
 " Tabs
-let s:p.tabline.left =     [[ s:blue, s:black ]]
-let s:p.tabline.tabsel =   [[ s:black, s:blue ]]
-let s:p.tabline.middle =   [[ s:blue, s:black ]]
+let s:p.tabline.left =     [[ s:white, s:black ]]
+let s:p.tabline.tabsel =   [[ s:black, s:white ]]
+let s:p.tabline.middle =   [[ s:white, s:black ]]
 let s:p.tabline.right =    [[ s:black, s:black ]]
 
 
