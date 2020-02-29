@@ -5,8 +5,8 @@ rofi.line-padding: 2
 rofi.color-enabled: true
 rofi.hide-scrollbar: true
 rofi.separator-style: solid
-rofi.color-window: #070725, #226ebf, #070725
-rofi.color-normal: #070725, #226ebf, #070725, #226ebf, #070725
-rofi.color-urgent: #070725, #226ebf, #070725, #070725, #226ebf
-rofi.color-active: #070725, #226ebf, #070725, #070725, #226ebf
+rofi.color-window: #22262E, #CCCCCC, #22262E
+rofi.color-normal: #22262E, #CCCCCC, #22262E, #CCCCCC, #22262E
+rofi.color-urgent: #22262E, #CCCCCC, #22262E, #22262E, #CCCCCC
+rofi.color-active: #22262E, #CCCCCC, #22262E, #22262E, #CCCCCC
 /* vim:ft=css
