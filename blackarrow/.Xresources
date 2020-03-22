@@ -1,3 +1,9 @@
+! Dmenu color
+dmenu.background : #181b21
+dmenu.foreground : #CCCCCC
+dmenu.selbackground : #CCCCCC
+dmenu.selforeground : #181b21
+
 ! Color scheme
 *.background: #181b21
 *.foreground: #CCCCCC

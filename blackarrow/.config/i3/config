@@ -109,6 +109,9 @@
 #############
 # Autostart #
 #############
+	# Clipboard manager
+		exec --no-startup-id clipmenud
+
 	# Remap buttons + keyboard layout #
 		exec --no-startup-id setxkbmap pl -option 'caps:ctrl_modifier'
 		exec --no-startup-id xcape -e 'Caps_Lock=Escape'
@@ -307,7 +310,7 @@
 		assign [class="calibre"] workspace $ws7
 
 	# Games (WS8) #
-		assign [class="Steam"] workspace $ws8
+		assign [class="Steam"] workspace $ws7
 
 	# Audio (WS9) #
 		for_window [class="Spotify"] move to workspace $ws9, workspace --no-auto-back-and-forth $ws9
