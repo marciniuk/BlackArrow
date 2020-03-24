@@ -61,7 +61,7 @@ monitor-strict   = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 modules-left   = i3
 modules-center =
-modules-right  = wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
+modules-right  = covid-19 sym4 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;tray-position	= right
@@ -126,6 +126,14 @@ label-visible-padding = 1
 label-urgent         = %index% %name%
 label-urgent-padding = 1
 
+;~~~~~~~~~~
+; COVID-19
+;~~~~~~~~~~
+[module/covid-19]
+type = custom/script
+
+interval = 1800
+exec = ~/.config/polybar/polybar-covid-19.sh
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~
 ; Wireless Network / Wi-Fi
@@ -170,7 +178,7 @@ format-volume = <ramp-volume> <label-volume>
 label-muted   = "  muted"
 ramp-volume-0 = " "
 ramp-volume-1 = " "
-ramp-volume-2 = " "
+ramp-volume-2 = " "
 ramp-volume-3 = " "
 
 
