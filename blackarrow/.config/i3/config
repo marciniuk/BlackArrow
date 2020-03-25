@@ -339,6 +339,7 @@
 	bindsym $Mod+$Moe+e exec --no-startup-id ~/.scripts/dmenu-unicode.sh
 	bindsym $Mod+$Moe+b exec --no-startup-id ~/.scripts/backlight.sh
 	bindsym $Mod+$Moe+f exec --no-startup-id ~/.scripts/fast-cleaning.sh
+	bindsym $Mod+$Moe+k exec --no-startup-id ~/.scripts/covid-19.sh
 
 
 #########################

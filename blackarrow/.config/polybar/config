@@ -61,7 +61,7 @@ monitor-strict   = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 modules-left   = i3
 modules-center =
-modules-right  = covid-19 sym4 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
+modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;tray-position	= right
@@ -132,8 +132,11 @@ label-urgent-padding = 1
 [module/covid-19]
 type = custom/script
 
-interval = 1800
-exec = ~/.config/polybar/polybar-covid-19.sh
+click-left  = pkill -USR1 polybar
+click-right = ~/.scripts/covid-19.sh
+interval    = 1800
+exec        = ~/.config/polybar/covid-19.sh
+label       = "%output% | "
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~
 ; Wireless Network / Wi-Fi
@@ -147,7 +150,7 @@ label-padding      = 1
 format-connected   = <ramp-signal> <label-connected>
 format-packetloss  = <animation-packetloss>
 label-connected    = %{A1:networkmanager_dmenu& disown:}%{A3:nmcli d wifi >/dev/null 2>&1 && networkmanager_dmenu & disown:}%local_ip%%{A}%{A}
-label-disconnected = %{A1:networkmanager_dmenu& disown:}%{A3:nmcli d wifi >/dev/null 2>&1 && networkmanager_dmenu & disown:}%{A}%{A}
+label-disconnected = %{A1:networkmanager_dmenu& disown:}%{A3:nmcli d wifi >/dev/null 2>&1 && networkmanager_dmenu & disown:}%{A}%{A}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
