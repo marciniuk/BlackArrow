@@ -68,7 +68,7 @@ modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-m
 ;tray-padding	= 2
 
 width              = 100%
-height             = 28
+height             = 25
 border-size        = 0
 border-top-size    = 0
 border-bottom-size = 0

@@ -21,6 +21,14 @@ set tabstop=4
 set shiftwidth=4
 set bg=light
 
+augroup langindentation
+  autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+  autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+  autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+  autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+  autocmd Filetype scss setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+augroup END
+
 " Colorscheme
 hi LineNr 			ctermfg=3
 hi CursorLineNr 	ctermfg=11
@@ -50,6 +58,36 @@ let g:lightline = {
 	\   'gitbranch': 'gitbranch#name'
 	\ },
 	\ }
+
+" ALE
+hi ALEWarning       ctermbg=1   ctermfg=0
+hi ALEErrorSign     ctermbg=1   ctermfg=0
+
+let g:ale_linters = {
+\   'c': ['ccls', 'clang'],
+\   'cpp': ['clang'],
+\   'javascript': ['eslint'],
+\   'php': ['php'],
+\   'python': ['pyls', 'flake8'],
+\   'sh': ['shellcheck'],
+\   'vim': ['vint'],
+\}
+let g:ale_fixers = {
+\   '*': ['trim_whitespace'],
+\   'c': ['clang-format'],
+\   'cpp': ['clang-format'],
+\   'css': ['prettier'],
+\   'go': ['gofmt'],
+\   'html': ['prettier'],
+\   'javascript': ['prettier'],
+\   'json': ['prettier'],
+\   'php': ['prettier'],
+\   'python': ['black'],
+\   'scss': ['prettier'],
+\   'yaml': ['prettier'],
+\}
+
+map <C-b> :ALEFix<CR>
 
 " Disable changing cursor to line
 set guicursor=
@@ -81,7 +119,7 @@ map <F2> :set mouse=<CR>
 map <F3> :set mouse=a<CR>
 
 " Delete unneeded spaces
-map <F4> :FixWhitespace<CR>
+map <F4> :ALEFix<CR>
 
 " Spell-check (English US and Polish)
 map <F5> :setlocal spell! spelllang=en_us<CR>
