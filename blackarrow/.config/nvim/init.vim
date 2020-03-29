@@ -64,27 +64,28 @@ hi ALEWarning       ctermbg=1   ctermfg=0
 hi ALEErrorSign     ctermbg=1   ctermfg=0
 
 let g:ale_linters = {
-\   'c': ['ccls', 'clang'],
-\   'cpp': ['clang'],
+\   'c':          ['ccls', 'clang'],
+\   'cpp':        ['clang'],
 \   'javascript': ['eslint'],
-\   'php': ['php'],
-\   'python': ['pyls', 'flake8'],
-\   'sh': ['shellcheck'],
-\   'vim': ['vint'],
+\   'php':        ['php'],
+\   'python':     ['pyls', 'flake8'],
+\   'sh':         ['shellcheck'],
+\   'vim':        ['vint'],
 \}
 let g:ale_fixers = {
-\   '*': ['trim_whitespace'],
-\   'c': ['clang-format'],
-\   'cpp': ['clang-format'],
-\   'css': ['prettier'],
-\   'go': ['gofmt'],
-\   'html': ['prettier'],
+\   'sh':         ['shfmt'],
+\   '*':          ['trim_whitespace'],
+\   'c':          ['clang-format'],
+\   'cpp':        ['clang-format'],
+\   'css':        ['prettier'],
+\   'go':         ['gofmt'],
+\   'html':       ['prettier'],
 \   'javascript': ['prettier'],
-\   'json': ['prettier'],
-\   'php': ['prettier'],
-\   'python': ['black'],
-\   'scss': ['prettier'],
-\   'yaml': ['prettier'],
+\   'json':       ['prettier'],
+\   'php':        ['prettier'],
+\   'python':     ['black'],
+\   'scss':       ['prettier'],
+\   'yaml':       ['prettier'],
 \}
 
 map <C-b> :ALEFix<CR>

@@ -61,14 +61,14 @@ monitor-strict   = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 modules-left   = i3
 modules-center =
-modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery sym coreuse temperature memory compton updates-arch-aur
+modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym coreuse temperature memory compton updates-arch-aur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;tray-position	= right
 ;tray-padding	= 2
 
 width              = 100%
-height             = 25
+height             = 28
 border-size        = 0
 border-top-size    = 0
 border-bottom-size = 0
@@ -265,10 +265,45 @@ time = %R
 ;~~~~~~~~~
 ; Battery
 ;~~~~~~~~~
-[module/battery]
+[module/battery0]
 type = internal/battery
 
 ; Use $ ls -1 /sys/class/power_supply/
+battery            = BAT0
+adapter            = ACAD
+full-at            = 98
+poll-interval      = 5
+bar-capacity-width = 10
+time-format        = %H:%M
+
+format-charging    = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full        = "  100%"
+label-discharging  = %percentage%%
+
+ramp-capacity-0 = "   "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-4 = "  "
+ramp-capacity-5 = "  "
+ramp-capacity-6 = "  "
+ramp-capacity-7 = "  "
+ramp-capacity-8 = "  "
+ramp-capacity-9 = "  "
+ramp-capacity-0-foreground = ${colors.urgent}
+
+animation-charging-0         = "  "
+animation-charging-1         = "  "
+animation-charging-2         = "  "
+animation-charging-3         = "  "
+animation-charging-4         = "  "
+animation-charging-framerate = 750
+
+
+[module/battery1]
+type = internal/battery
+
 battery            = BAT1
 adapter            = ACAD
 full-at            = 98
@@ -277,141 +312,21 @@ bar-capacity-width = 10
 time-format        = %H:%M
 
 format-charging    = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity>
+format-discharging = <ramp-capacity><label-discharging>
 format-full        = "  100%"
+label-discharging  = %percentage%%
 
-#00-09
-ramp-capacity-0 = "   0%"
-ramp-capacity-1 = "   1%"
-ramp-capacity-2 = "   2%"
-ramp-capacity-3 = "   3%"
-ramp-capacity-4 = "   4%"
-ramp-capacity-5 = "   5%"
-ramp-capacity-6 = "   6%"
-ramp-capacity-7 = "   7%"
-ramp-capacity-8 = "   8%"
-ramp-capacity-9 = "   9%"
-#10-19
-ramp-capacity-10 = "   10%"
-ramp-capacity-11 = "  11%"
-ramp-capacity-12 = "  12%"
-ramp-capacity-13 = "  13%"
-ramp-capacity-14 = "  14%"
-ramp-capacity-15 = "  15%"
-ramp-capacity-16 = "  16%"
-ramp-capacity-17 = "  17%"
-ramp-capacity-18 = "  18%"
-ramp-capacity-19 = "  19%"
-#20-29
-ramp-capacity-20 = "  20%"
-ramp-capacity-21 = "  21%"
-ramp-capacity-22 = "  22%"
-ramp-capacity-23 = "  23%"
-ramp-capacity-24 = "  24%"
-ramp-capacity-25 = "  25%"
-ramp-capacity-26 = "  26%"
-ramp-capacity-27 = "  27%"
-ramp-capacity-28 = "  28%"
-ramp-capacity-29 = "  29%"
-#30-39
-ramp-capacity-30 = "  30%"
-ramp-capacity-31 = "  31%"
-ramp-capacity-32 = "  32%"
-ramp-capacity-33 = "  33%"
-ramp-capacity-34 = "  34%"
-ramp-capacity-35 = "  35%"
-ramp-capacity-36 = "  36%"
-ramp-capacity-37 = "  37%"
-ramp-capacity-38 = "  38%"
-ramp-capacity-39 = "  39%"
-#40-49
-ramp-capacity-40 = "  40%"
-ramp-capacity-41 = "  41%"
-ramp-capacity-42 = "  42%"
-ramp-capacity-43 = "  43%"
-ramp-capacity-44 = "  44%"
-ramp-capacity-45 = "  45%"
-ramp-capacity-46 = "  46%"
-ramp-capacity-47 = "  47%"
-ramp-capacity-48 = "  48%"
-ramp-capacity-49 = "  49%"
-#50-59
-ramp-capacity-50 = "  50%"
-ramp-capacity-51 = "  51%"
-ramp-capacity-52 = "  52%"
-ramp-capacity-53 = "  53%"
-ramp-capacity-54 = "  54%"
-ramp-capacity-55 = "  55%"
-ramp-capacity-56 = "  56%"
-ramp-capacity-57 = "  57%"
-ramp-capacity-58 = "  58%"
-ramp-capacity-59 = "  59%"
-#60-69
-ramp-capacity-60 = "  60%"
-ramp-capacity-61 = "  61%"
-ramp-capacity-62 = "  62%"
-ramp-capacity-63 = "  63%"
-ramp-capacity-64 = "  64%"
-ramp-capacity-65 = "  65%"
-ramp-capacity-66 = "  66%"
-ramp-capacity-67 = "  67%"
-ramp-capacity-68 = "  68%"
-ramp-capacity-69 = "  69%"
-#70-79
-ramp-capacity-70 = "  70%"
-ramp-capacity-71 = "  71%"
-ramp-capacity-72 = "  72%"
-ramp-capacity-73 = "  73%"
-ramp-capacity-74 = "  74%"
-ramp-capacity-75 = "  75%"
-ramp-capacity-76 = "  76%"
-ramp-capacity-77 = "  77%"
-ramp-capacity-78 = "  78%"
-ramp-capacity-79 = "  79%"
-#80-89
-ramp-capacity-80 = "  80%"
-ramp-capacity-81 = "  81%"
-ramp-capacity-82 = "  82%"
-ramp-capacity-83 = "  83%"
-ramp-capacity-84 = "  84%"
-ramp-capacity-85 = "  85%"
-ramp-capacity-86 = "  86%"
-ramp-capacity-87 = "  87%"
-ramp-capacity-88 = "  88%"
-ramp-capacity-89 = "  89%"
-#90-100
-ramp-capacity-90  = "  90%"
-ramp-capacity-91  = "  91%"
-ramp-capacity-92  = "  92%"
-ramp-capacity-93  = "  93%"
-ramp-capacity-94  = "  94%"
-ramp-capacity-95  = "  95%"
-ramp-capacity-96  = "  96%"
-ramp-capacity-97  = "  97%"
-ramp-capacity-98  = "  98%"
-ramp-capacity-99  = "  99%"
-ramp-capacity-100 = "  100%"
-
-ramp-capacity-0-foreground  = ${colors.urgent}
-ramp-capacity-1-foreground  = ${colors.urgent}
-ramp-capacity-2-foreground  = ${colors.urgent}
-ramp-capacity-3-foreground  = ${colors.urgent}
-ramp-capacity-4-foreground  = ${colors.urgent}
-ramp-capacity-5-foreground  = ${colors.urgent}
-ramp-capacity-6-foreground  = ${colors.urgent}
-ramp-capacity-7-foreground  = ${colors.urgent}
-ramp-capacity-8-foreground  = ${colors.urgent}
-ramp-capacity-9-foreground  = ${colors.urgent}
-ramp-capacity-10-foreground = ${colors.urgent}
-ramp-capacity-11-foreground = ${colors.urgent}
-ramp-capacity-12-foreground = ${colors.urgent}
-ramp-capacity-13-foreground = ${colors.urgent}
-ramp-capacity-14-foreground = ${colors.urgent}
-ramp-capacity-15-foreground = ${colors.urgent}
-ramp-capacity-16-foreground = ${colors.urgent}
-ramp-capacity-17-foreground = ${colors.urgent}
-ramp-capacity-18-foreground = ${colors.urgent}
-ramp-capacity-19-foreground = ${colors.urgent}
+ramp-capacity-0 = "   "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-4 = "  "
+ramp-capacity-5 = "  "
+ramp-capacity-6 = "  "
+ramp-capacity-7 = "  "
+ramp-capacity-8 = "  "
+ramp-capacity-9 = "  "
+ramp-capacity-0-foreground = ${colors.urgent}
 
 animation-charging-0         = "  "
 animation-charging-1         = "  "

@@ -89,7 +89,7 @@
 		for_window [class="^.*"] border pixel 3, title_format " %title "
 
 	# Gaps #
-		gaps inner 10
+		gaps inner 0
 		gaps outer 0
 
 		new_window normal
