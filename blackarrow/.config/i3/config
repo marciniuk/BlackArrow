@@ -310,7 +310,7 @@
 		assign [class="calibre"] workspace $ws7
 
 	# Games (WS8) #
-		assign [class="Steam"] workspace $ws7
+		assign [class="Steam"] workspace $ws8
 
 	# Audio (WS9) #
 		for_window [class="Spotify"] move to workspace $ws9, workspace --no-auto-back-and-forth $ws9
