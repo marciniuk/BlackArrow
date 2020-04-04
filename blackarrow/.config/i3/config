@@ -333,7 +333,8 @@
 # Key Bindings (scripts) #
 ##########################
 	bindsym $Mod+$Moe+d exec --no-startup-id ~/.scripts/dysk.sh
-	bindsym $Mod+$Moe+c exec --no-startup-id ~/.scripts/compton.sh --toggle
+	bindsym $Mod+$Moe+c exec --no-startup-id ~/.scripts/configuration.sh
+#	bindsym $Mod+$Moe+c exec --no-startup-id ~/.scripts/compton.sh --toggle
 	bindsym $Mod+$Moe+v exec --no-startup-id ~/.scripts/files.sh
 	bindsym $Mod+$Moe+w exec --no-startup-id ~/.scripts/wallpaper.sh
 	bindsym $Mod+$Moe+e exec --no-startup-id ~/.scripts/dmenu-unicode.sh

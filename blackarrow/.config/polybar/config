@@ -275,10 +275,9 @@ full-at            = 98
 poll-interval      = 5
 bar-capacity-width = 10
 time-format        = %H:%M
-
-format-charging    = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity><label-discharging>
-format-full        = "  100%"
+format-charging    = %{A1:termite -e "watch acpi -V" & disown:}<animation-charging> <label-charging>%{A}
+format-discharging = %{A1:termite -e "watch acpi -V" & disown:}<ramp-capacity><label-discharging>%{A}
+format-full        = %{A1:termite -e "watch acpi -V" & disown:}  100%%{A}
 label-discharging  = %percentage%%
 
 ramp-capacity-0 = "   "
@@ -311,9 +310,9 @@ poll-interval      = 5
 bar-capacity-width = 10
 time-format        = %H:%M
 
-format-charging    = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity><label-discharging>
-format-full        = "  100%"
+format-charging    = %{A1:termite -e "watch acpi -V" & disown:}<animation-charging> <label-charging>%{A}
+format-discharging = %{A1:termite -e "watch acpi -V" & disown:}<ramp-capacity><label-discharging>%{A}
+format-full        = %{A1:termite -e "watch acpi -V" & disown:}  100%%{A}
 label-discharging  = %percentage%%
 
 ramp-capacity-0 = "   "
@@ -345,7 +344,7 @@ type = internal/cpu
 interval        = 3
 format-padding  = 1
 format          = <label>
-label           = %{A1:termite -e "htop -s PERCENT_CPU" & disown:}%percentage:2%%%{A}
+label           = %{A1:termite -e "./.scripts/cpuinfo.sh" & disown:}%percentage:2%%%{A}
 ramp-coreload-0 = ▂
 ramp-coreload-1 = ▃
 ramp-coreload-2 = ▄

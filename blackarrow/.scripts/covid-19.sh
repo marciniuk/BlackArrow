@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-case "$(printf " Poland \n New Zealand \n China \n Italy \n USA \n World " | dmenu -h 33 -i -p '  System  ')" in
+case "$(printf " Poland \n New Zealand \n China \n Italy \n USA \n World " | dmenu -h 33 -i -p '  Place  ')" in
 	" Poland ")
 		place=" Poland "      location="https://corona.lmao.ninja/countries/Poland";;
 
