@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-question="$(printf " Text\n Picture\n Set wallpaper\n Cancel\n $(xclip -o -selection clipboard | sed 1q)" | dmenu -i -p 'What type of file?')"
+question="$(printf " Text\n Picture\n Set wallpaper\n Cancel\n %s$(xclip -o -selection clipboard | sed 1q)" | dmenu -i -p 'What type of file?')"
 
 case "$question" in
 	" Text")          termite -e "nvim \"$(xclip -o -selection clipboard)\"";;

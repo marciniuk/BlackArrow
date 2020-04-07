@@ -69,16 +69,16 @@
 ####################
 # Workspaces Icons #
 ####################
-	set $ws0 "0: "
-	set $ws1 "1: "
-	set $ws2 "2: "
-	set $ws3 "3: "
-	set $ws4 "4: "
-	set $ws5 "5: "
-	set $ws6 "6: "
-	set $ws7 "7: "
-	set $ws8 "8: "
-	set $ws9 "9: "
+	set $ws0  "0: "
+	set $ws1  "1: "
+	set $ws2  "2: "
+	set $ws3  "3: "
+	set $ws4  "4: "
+	set $ws5  "5: "
+	set $ws6  "6: "
+	set $ws7  "7: "
+	set $ws8  "8: "
+	set $ws9  "9: "
 	set $ws10 "10: "
 
 
@@ -92,13 +92,13 @@
 		gaps inner 0
 		gaps outer 0
 
-		new_window normal
-		new_float normal
-		hide_edge_borders smart
+		new_window              normal
+		new_float               normal
+		hide_edge_borders       smart
 		popup_during_fullscreen smart
 
 	# Changing Border style #
-		bindsym Ctrl+b border pixel 3
+		bindsym Ctrl+b       border pixel 3
 		bindsym Ctrl+Shift+b border none
 
 	# Change Gaps size #
@@ -109,13 +109,6 @@
 #############
 # Autostart #
 #############
-	# Clipboard manager
-		exec --no-startup-id clipmenud
-
-	# Remap buttons + keyboard layout #
-		exec --no-startup-id setxkbmap pl -option 'caps:ctrl_modifier'
-		exec --no-startup-id xcape -e 'Caps_Lock=Escape'
-
 	# Load .Xresources configs #
 		exec_always --no-startup-id xrdb -load ~/.Xresources
 
@@ -143,6 +136,13 @@
 	# Wallpaper #
 		exec --no-startup-id xwallpaper --daemon --zoom $(xdg-user-dir PICTURES)/.wallpaper
 
+	# Clipboard manager
+		exec --no-startup-id clipmenud
+
+	# Remap buttons + keyboard layout #
+		exec --no-startup-id setxkbmap pl -option 'caps:ctrl_modifier'
+		exec --no-startup-id xcape -e 'Caps_Lock=Escape'
+
 
 #################
 #  Key Bindings #
@@ -156,7 +156,7 @@
 		bindsym $Mod+Shift+q kill
 
 	# Hide polybar #
-		bindsym $Mod+bracketleft exec killall -9 polybar
+		bindsym $Mod+bracketleft  exec killall -9 polybar
 		bindsym $Mod+bracketright exec .config/polybar/launch.sh
 
 	# Launcher #
@@ -173,14 +173,14 @@
 	# Audio - XF86 bindings #
 		bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 		bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
-		bindsym XF86AudioMute exec --no-startup-id pamixer -t
-		bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-		bindsym XF86AudioNext exec --no-startup-id playerctl next
-		bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-		bindsym XF86AudioStop exec --no-startup-id playerctl stop
+		bindsym XF86AudioMute        exec --no-startup-id pamixer -t
+		bindsym XF86AudioPlay        exec --no-startup-id playerctl play-pause
+		bindsym XF86AudioNext        exec --no-startup-id playerctl next
+		bindsym XF86AudioPrev        exec --no-startup-id playerctl previous
+		bindsym XF86AudioStop        exec --no-startup-id playerctl stop
 
 	# Backlight - XF86 bindings #
-		bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+		bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 10
 		bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 
@@ -201,7 +201,7 @@
 
 	# Next/Previous Workspace #
 		bindsym $Mod+Right workspace next
-		bindsym $Mod+Left workspace prev
+		bindsym $Mod+Left  workspace prev
 
 	# Move focused container to Workspace #
 		bindsym $Mod+Ctrl+1 move container to workspace $ws1
@@ -264,13 +264,13 @@
 		for_window [urgent="latest"] focus
 
 	# Container layout #
-		bindsym $Mod+w layout tabbed
+		bindsym $Mod+w       layout tabbed
 		bindsym $Mod+Shift+w layout stacking
-		bindsym $Mod+e layout toggle split
+		bindsym $Mod+e       layout toggle split
 
 	# Split window #
-		bindsym $Mod+m split vertical
-		bindsym $Mod+n split horizontal
+		bindsym $Mod+m      split vertical
+		bindsym $Mod+n      split horizontal
 		default_orientation horizontal
 
 
@@ -281,43 +281,44 @@
 		for_window [window_role="GtkFileChooserDialog"] resize shrink height 10 px
 
 	# Update (WS0) #
-		assign [instance="Update"] workspace $ws0
+		assign [instance="Update"]          workspace $ws0
 
 	# Terminal (WS1) #
-		assign [class="Termite"] workspace $ws1
+		assign [class="Termite"]            workspace $ws1
 
 	# Browsers (WS2) #
-		assign [class="Google-chrome"] workspace $ws2
+		assign [class="Google-chrome"]      workspace $ws2
+		assign [class="firefox"]            workspace $ws2
 
 	# File browsers (WS3) #
-		assign [class="Nemo"] workspace $ws3
-		assign [class="Thunar"] workspace $ws3
+		assign [class="Nemo"]               workspace $ws3
+		assign [class="Thunar"]             workspace $ws3
 
 	# Texting (WS4) #
-		assign [class="TelegramDesktop"] workspace $ws4
-		assign [class="Riot"] workspace $ws4
+		assign [class="TelegramDesktop"]    workspace $ws4
+		assign [class="Riot"]               workspace $ws4
 
 	# Graphics (WS5) #
-		assign [class="Gimp"] workspace $ws5
-		assign [class="Inkscape"] workspace $ws5
+		assign [class="Gimp"]               workspace $ws5
+		assign [class="Inkscape"]           workspace $ws5
 
 	# Documents (WS6) #
-		assign [class="Zathura"] workspace $ws6
-		assign [class="Evince"] workspace $ws6
-		assign [class="libreoffice"] workspace $ws6
+		assign [class="Zathura"]            workspace $ws6
+		assign [class="Evince"]             workspace $ws6
+		assign [class="libreoffice"]        workspace $ws6
 
 	# eBooks (WS7) #
-		assign [class="calibre"] workspace $ws7
+		assign [class="calibre"]            workspace $ws7
 
 	# Games (WS8) #
-		assign [class="Steam"] workspace $ws8
+		assign [class="Steam"]              workspace $ws8
 
 	# Audio (WS9) #
-		for_window [class="Spotify"] move to workspace $ws9, workspace --no-auto-back-and-forth $ws9
+		for_window [class="Spotify"]        move to workspace $ws9, workspace --no-auto-back-and-forth $ws9
 
 	# Video (WS10) #
 		assign [class="Gtk-youtube-viewer"] workspace $ws10
-		assign [class="obs"] workspace $ws10
+		assign [class="obs"]                workspace $ws10
 
 	# vim: filetype=i3   #
 	# vim: set ts=6:sw=6 #
@@ -341,30 +342,31 @@
 	bindsym $Mod+$Moe+b exec --no-startup-id ~/.scripts/backlight.sh
 	bindsym $Mod+$Moe+f exec --no-startup-id ~/.scripts/fast-cleaning.sh
 	bindsym $Mod+$Moe+k exec --no-startup-id ~/.scripts/covid-19.sh
+	bindsym $Mod+c      exec --no-startup-id ~/.scripts/app/clipmenu.sh
+
 
 
 #########################
 # Applications Bindings #
 #########################
-	bindsym $Mod+Return exec $terminal
-	bindsym $Mod+c exec --no-startup-id ~/.scripts/app/chrome.sh
-	bindsym $Mod+f exec --no-startup-id ~/.scripts/app/applications.sh caprine
-	bindsym $Mod+t exec --no-startup-id telegram-desktop
-	bindsym $Moe+w exec --no-startup-id networkmanager_dmenu
+	bindsym $Mod+Return  exec $terminal
+	bindsym $Mod+f       exec --no-startup-id ~/.scripts/app/firefox.sh
+	bindsym $Mod+t       exec --no-startup-id telegram-desktop
+	bindsym $Moe+w       exec --no-startup-id networkmanager_dmenu
 	bindsym $Moe+Shift+w exec --no-startup-id nmcli d wifi &> /dev/null && networkmanager_dmenu
-	bindsym $Mod+p exec --no-startup-id ~/.scripts/app/applications.sh thunar
-	bindsym $Mod+s exec --no-startup-id ~/.scripts/app/AppForS.sh
-	bindsym $Mod+g exec --no-startup-id ~/.scripts/app/now-open.sh gimp
-	bindsym $Mod+b exec --no-startup-id calibre
+	bindsym $Mod+p       exec --no-startup-id ~/.scripts/app/applications.sh thunar
+	bindsym $Mod+s       exec --no-startup-id ~/.scripts/app/AppForS.sh
+	bindsym $Mod+g       exec --no-startup-id ~/.scripts/app/now-open.sh gimp
+	bindsym $Mod+b       exec --no-startup-id calibre
 	bindsym $Moe+Shift+p exec --no-startup-id com.github.ronnydo.colorpicker
-	bindsym $Mod+k exec --no-startup-id gnome-calculator
+	bindsym $Mod+k       exec --no-startup-id gnome-calculator
 
 
 #########################
 # Applications settings #
 #########################
 	for_window [class="Gsimplecal"] resize set 225 230
-	for_window [class="nvim-qt"] focus
+	for_window [class="nvim-qt"]    focus
 
 
 # ____  _            _        _	                                  #

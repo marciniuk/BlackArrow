@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 [ ! -f /proc/acpi/ibm/fan ] && echo "This script only works with ThinkPads" && exit 1
 

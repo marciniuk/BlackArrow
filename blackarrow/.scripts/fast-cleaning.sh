@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 case "$(printf " ~/.yay-log\n ~/.BA\n All\n Cancel" | dmenu -h 33 -i -p 'Are you cleaning:')" in
 	" Cancel") exit 0;;
@@ -13,13 +13,13 @@ case "$(printf " ~/.yay-log\n ~/.BA\n All\n Cancel" | dmenu -h 33 -i
 
 	" ~/.BA")
 		#Configs
-		if mkdir ~/.BA/configi/"$(date +%G-%m)" &> /dev/null;
+		if mkdir ~/.BA/configi/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Created folder "'~/.BA/configi/'"$(date +%G-%m)""
 				";
 			else echo "	The folder "'~/.BA/configi/'"$(date +%G-%m)"" already exists
 				"; fi
 
-		if mv ~/.BlackArrowGit/Kopia\ "$(date +%G-%m)"* ~/.BA/configi/"$(date +%G-%m)" &> /dev/null;
+		if mv ~/.BlackArrowGit/Kopia\ "$(date +%G-%m)"* ~/.BA/configi/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Moved folders to "'~/.BA/configi/'"$(date +%G-%m)""
 				";
 			else echo "	The "'~/.BlackArrowGit'" folder is empty
@@ -39,13 +39,13 @@ case "$(printf " ~/.yay-log\n ~/.BA\n All\n Cancel" | dmenu -h 33 -i
 		"
 
 		#Installers
-		if mkdir ~/.BA/instalator/"$(date +%G-%m)" &> /dev/null;
+		if mkdir ~/.BA/instalator/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Created folder "'~/.BA/instalator/'"$(date +%G-%m)""
 				";
 			else echo "	The folder "'~/.BA/instalator/'"$(date +%G-%m)"" already exists
 				"; fi
 
-		if mv ~/.BlackArrowOldInstallerGit/Kopia\ "$(date +%G-%m)"* ~/.BA/instalator/"$(date +%G-%m)" &> /dev/null;
+		if mv ~/.BlackArrowOldInstallerGit/Kopia\ "$(date +%G-%m)"* ~/.BA/instalator/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Moved folders to "'~/.BA/instalator/'"$(date +%G-%m)""
 				";
 			else echo "	The "'~/.BlackArrowOldInstallerGit'" folder is empty
@@ -74,13 +74,13 @@ case "$(printf " ~/.yay-log\n ~/.BA\n All\n Cancel" | dmenu -h 33 -i
 		"
 
 		#configi
-		if mkdir ~/.BA/configi/"$(date +%G-%m)" &> /dev/null;
+		if mkdir ~/.BA/configi/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Created folder "'~/.BA/configi/'"$(date +%G-%m)""
 				";
 			else echo "	The folder "'~/.BA/configi/'"$(date +%G-%m)"" already exists
 				"; fi
 
-		if mv ~/.BlackArrowGit/Kopia\ "$(date +%G-%m)"* ~/.BA/configi/"$(date +%G-%m)" &> /dev/null;
+		if mv ~/.BlackArrowGit/Kopia\ "$(date +%G-%m)"* ~/.BA/configi/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Moved folders to "'~/.BA/configi/'"$(date +%G-%m)""
 				";
 			else echo "	The "'~/.BlackArrowGit'" folder is empty
@@ -100,13 +100,13 @@ case "$(printf " ~/.yay-log\n ~/.BA\n All\n Cancel" | dmenu -h 33 -i
 		"
 
 		#Installers
-		if mkdir ~/.BA/instalator/"$(date +%G-%m)" &> /dev/null;
+		if mkdir ~/.BA/instalator/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Created folder "'~/.BA/instalator/'"$(date +%G-%m)""
 				";
 			else echo "	The folder "'~/.BA/instalator/'"$(date +%G-%m)"" already exists
 				"; fi
 
-		if mv ~/.BlackArrowOldInstallerGit/Kopia\ "$(date +%G-%m)"* ~/.BA/instalator/"$(date +%G-%m)" &> /dev/null;
+		if mv ~/.BlackArrowOldInstallerGit/Kopia\ "$(date +%G-%m)"* ~/.BA/instalator/"$(date +%G-%m)" 2>/dev/null;
 			then echo "	Moved folders to "'~/.BA/instalator/'"$(date +%G-%m)""
 				";
 			else echo "	The "'~/.BlackArrowOldInstallerGit'" folder is empty

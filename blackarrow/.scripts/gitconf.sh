@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/sur/bin/env bash
 
 Data=$(date +%G-%m-%d\ %H:%M:%S)
 

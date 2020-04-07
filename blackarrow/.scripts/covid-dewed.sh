@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 download() {
   stats="$(curl -s "https://example.org")"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/sur/bin/env sh
 
 # Data=$(date +%d-%m-%G\ %H:%M:%S)
 
@@ -16,7 +16,7 @@
 #####################
 # Wrzucanie na gita #
 #####################
-	if cd ~/.BlackArrowInstallerGit &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
+	if cd ~/.BlackArrowInstallerGit 2>/dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 	git add .
 #	git commit -m "$Data"
 #	git commit -m "$commit"
