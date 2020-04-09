@@ -116,7 +116,8 @@
 		exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 	# external locker as X screen saver #
-		exec_always --no-startup-id xss-lock -- i3lock -i /usr/share/backgrounds/i3lock.png &
+	#	exec_always --no-startup-id xss-lock -- i3lock -i /usr/share/backgrounds/i3lock.png &
+		exec_always --no-startup-id xss-lock -- betterlockscreen --lock
 
 	# If you have a numpad you may want to enable this #
 		exec_always --no-startup-id numlockx on

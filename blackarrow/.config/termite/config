@@ -21,7 +21,6 @@ scrollback_lines = 10000
 search_wrap = true
 icon_name = utilities-terminal
 geometry = 800x550
-clickable_url = true
 cursor_blink = system
 cursor_shape = block
 browser = exo-open
