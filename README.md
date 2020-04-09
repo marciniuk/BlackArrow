@@ -52,3 +52,5 @@ Yes, for now only "TelegramDesktop" but we are planning to introduce a telegram 
 ![Questions](https://gitlab.com/xXBlackMaskXx/basss/raw/master/ScreenShots/questions.png)
 ![Wallpaper v1](https://gitlab.com/xXBlackMaskXx/basss/raw/master/ScreenShots/Wallpaper%20v1.png)
 ![Wallpaper v2](https://gitlab.com/xXBlackMaskXx/basss/raw/master/ScreenShots/Wallpaper%20v2.png)
+![Wallpaper v3](https://gitlab.com/xXBlackMaskXx/basss/raw/master/ScreenShots/Wallpaper%20v3.png)
+
