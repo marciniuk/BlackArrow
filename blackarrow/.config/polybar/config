@@ -378,8 +378,9 @@ ramp-2 = ""
 ramp-3 = ""
 ramp-4 = ""
 ramp-5 = ""
+ramp-6 = ""
 
-ramp-5-foreground     = ${colors.urgent}
+ramp-6-foreground     = ${colors.urgent}
 format-warn           = <label-warn>
 label-warn            = " %temperature-c%"
 label-warn-padding    = 1
