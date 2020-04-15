@@ -43,7 +43,7 @@
 # class #
 #########
 	# class                 bd          bg          txt         ind         child_bd
-	client.focused          $bg         $fg         $bg         $fg         $fg
+	client.focused          $bg         $black_l    $fg         $fg         $fg
 	client.unfocused        $bg         $bg         $fg         $bg         $bg
 	client.focused_inactive $bg         $fg         $bg         $bg         $bg
 	client.urgent           $bg         $bg         $fg         $bg         $bg

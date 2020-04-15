@@ -120,6 +120,9 @@
 	# Pacman #
 		alias oldtg='sudo pacman -U /home/adrian/Pliki/Pakiety/telegram-desktop-1.8.4-1-x86_64.pkg.tar.xz'
 
+	# Reset && zsh #
+		alias reset='reset && zsh'
+
 #########
 ## ??? ##
 #########
