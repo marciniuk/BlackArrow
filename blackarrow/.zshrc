@@ -123,6 +123,9 @@
 	# Reset && zsh #
 		alias reset='reset && zsh'
 
+	# How many files in folder & subfolder #
+		alias howmany='find . -type f -print | wc -l'
+
 #########
 ## ??? ##
 #########
