@@ -1,7 +1,7 @@
 #!/bin/sh
 
 download() {
-        stats="$(curl -s "https://corona.lmao.ninja/countries/Poland")"
+        stats="$(curl -s "https://corona.lmao.ninja/v2/countries/Poland")"
    todaycases="$(echo "$stats" | jq '.todayCases' 2>/dev/null)" || return
   todaydeaths="$(echo "$stats" | jq '.todayDeaths')"
 
