@@ -55,14 +55,20 @@
 ###########
 # Aliases #
 ###########
+	# SSD #
+		alias  ssdinfo='sudo smartctl -a /dev/sda'
+		alias     ssdi='sudo smartctl -a /dev/sda'
+		alias ssdclear='sudo fstrim / && sudo fstrim /boot'
+		alias     ssdc='sudo fstrim / && sudo fstrim /boot'
+
 	# GZG #
-		alias gzg='cd ~/grandzonegaming'
-		alias gzgs='cd ~/grandzonegaming/_site'
+		alias       gzg='cd ~/grandzonegaming'
+		alias      gzgs='cd ~/grandzonegaming/_site'
 		alias gzgserwer='cd ~/grandzonegaming && bundle exec jekyll serve --livereload --incremental'
-		alias gzgbuild='cd ~/grandzonegaming && bundle exec jekyll build'
+		alias  gzgbuild='cd ~/grandzonegaming && bundle exec jekyll build'
 
 	# Vim #
-		alias vi="nvim"
+		alias  vi="nvim"
 		alias vim="nvim"
 		alias nvi="nvim"
 
@@ -73,18 +79,18 @@
 		alias update='yay -Syu |& tee -a ~/.yay-log/seen/"$(date +%Y-%m-%d\ %H:%M:%S)".log && xdotool key "super+bracketright"'
 
 	# NoName #
-		alias czyść='./.scripts/fast-cleaning.sh'
-		alias sudo='sudo '
+		alias  czyść='./.scripts/fast-cleaning.sh'
+		alias   sudo='sudo '
 		alias random='./.scripts/random.out'
-		alias woman='man'
+		alias  woman='man'
 
 	# Youtube-dl #
-		alias yt-dl='youtube-dl'
-		alias yt-video='youtube-dl -f bestvideo -o "%(title)s.%(ext)s"'
-		alias yt-webm='youtube-dl -f webm -o "%(title)s.%(ext)s"'
-		alias yt-audio='youtube-dl -f bestaudio -o "%(title)s.%(ext)s"'
-		alias yt-opus='youtube-dl -x --audio-format opus -o "%(title)s.%(ext)s"'
-		alias yt-vorbis='youtube-dl -x --audio-format vorbis -o "%(title)s.%(ext)s"'
+		alias        yt-dl='youtube-dl'
+		alias      yt-opus='youtube-dl -x --audio-format opus -o "%(title)s.%(ext)s"'
+		alias      yt-webm='youtube-dl -f webm -o "%(title)s.%(ext)s"'
+		alias     yt-video='youtube-dl -f bestvideo -o "%(title)s.%(ext)s"'
+		alias     yt-audio='youtube-dl -f bestaudio -o "%(title)s.%(ext)s"'
+		alias    yt-vorbis='youtube-dl -x --audio-format vorbis -o "%(title)s.%(ext)s"'
 		alias yt-thumbnail='youtube-dl --write-thumbnail --skip-download -o "%(title)s.%(ext)s"'
 
 	# Git configs #
@@ -102,15 +108,15 @@
 		alias gb='git add . && git commit && git push'
 
 	# Pliki #
-		alias bai='nvim ~/.scripts/BA-Installer.sh'
+		alias  bai='nvim ~/.scripts/BA-Installer.sh'
 		alias 2048='~/.2048/./2048'
 		alias game='greed'
 
 	# Yay log #
 		## yay log folder
-		alias ylf='cd ~/.yay-log'
+		alias  ylf='cd ~/.yay-log'
 		## yay log last
-		alias yll='ls -dtr1 ~/.yay-log/* | tail -1'
+		alias  yll='ls -dtr1 ~/.yay-log/* | tail -1'
 		## yay log open last
 		alias ylol='vi "$(ls -dtr1 ~/.yay-log/* | tail -1)"'
 
