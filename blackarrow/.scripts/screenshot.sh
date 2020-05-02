@@ -9,21 +9,21 @@ mkdir "$(xdg-user-dir PICTURES)"/.OldScreenShots/
 #########################################
 # Selecting a quick/advanced screenshot #
 #########################################
-	case "$(printf " Quick\n Quick+copy\n Advanced\n Cancel" | dmenu -i -p 'What screenshot you want to do:')" in
+	case "$(printf " Quick+copy\n Quick\n Advanced\n Cancel" | dmenu -i -p 'What screenshot you want to do:')" in
+		" Quick+copy") sleep 0.5 && maim -u "$(xdg-user-dir PICTURES)"/ScreenShots/"$(date +%G-%m-%d\ %H:%M:%S.png)"
+		                xclip -selection clipboard -t image/png "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')"
+		                notify-send -i "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')" "ScreenShot copied and saved."
+		                exit 0;;
 
 		" Quick") sleep 0.5 && maim -u "$(xdg-user-dir PICTURES)"/ScreenShots/"$(date +%G-%m-%d\ %H:%M:%S.png)"
 		           notify-send -i "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')" "ScreenShot saved."
 		           exit 0;;
 
-		" Quick+copy") sleep 0.5 && maim -u "$(xdg-user-dir PICTURES)"/ScreenShots/"$(date +%G-%m-%d\ %H:%M:%S.png)"
-		                xclip -selection clipboard -t image/png "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')"
-		                notify-send -i "$(find "$(xdg-user-dir PICTURES)"/ScreenShots/* | sed '$!d')" "ScreenShot copied and saved."
-		                exit 0;;
 		" Advanced")
 			#~~~~~~~~~~~~~~~#
 			# dmenu prompts #
 			#~~~~~~~~~~~~~~~#
-			TYPE="$(printf " Screen\n Window" | dmenu -i -p 'What do you want to screenshot?')"
+			TYPE="$(printf " Window\n Screen" | dmenu -i -p 'What do you want to screenshot?')"
 			COPY="$(printf " Yes\n No"        | dmenu -i -p 'Do you want to copy to clipboard?')"
 			TIME="$(printf "0.5\n5\n10\n15"     | dmenu -i -p 'How many seconds you want to wait?')"
 
