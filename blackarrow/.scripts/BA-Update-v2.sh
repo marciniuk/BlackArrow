@@ -8,6 +8,8 @@
 #                                       |___/        |_|
 #
 
+echo "It doesn't work. I need to fix the script. Use the installer. It will probably work." && exit
+
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
 # Color definitions # @ Definiowanie kolorów @
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
