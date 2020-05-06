@@ -2,14 +2,14 @@
 
 case "$1" in
 	--toggle)
-		if [ "$(pgrep -x compton)" ]
+		if [ "$(pgrep -x picom)" ]
 		then
-			killall -9 compton
+			killall -9 picom
 		else
-			compton -b
+			picom -b
 		fi;;
 	*)
-        if [ "$(pgrep -x compton)" ]
+        if [ "$(pgrep -x picom)" ]
 		then
 			echo ""
 		else

@@ -569,10 +569,10 @@ interval    = 600
 [module/compton]
 type = custom/script
 
-exec       = ~/.scripts/compton.sh
+exec       = ~/.scripts/picom.sh
 label      = %output%
 interval   = 5
-click-left = ~/.scripts/compton.sh --toggle && xdotool key "super+bracketright"
+click-left = ~/.scripts/picom.sh --toggle && xdotool key "super+bracketright"
 
 
 ;~~~~~~~~~~~~~~~~
