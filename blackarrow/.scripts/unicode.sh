@@ -4,7 +4,7 @@
 
 xclip -h 2>/dev/null || exit
 
-CHOSEN=$(sed '0,/^__DATA__$/d' "$0" | dmenu -i -l 10 -p 'Unicode')
+CHOSEN=$(sed '0,/^__DATA__$/d' "$0" | rofi -dmenu -i -l 15 -p 'Unicode')
 
 [ "$CHOSEN" != "" ] || exit
 
