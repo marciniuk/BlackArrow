@@ -13,7 +13,7 @@ then
 		*)                    exit 0
 	esac
 else
-	case "$(printf "龜 Firefox\n Chrome\n Chrome Incognito\n Firefox Incognito\n Cancel" | dmenu -i -p ' Run: ')" in
+	case "$(printf " Chrome\n Chrome Incognito\n龜 Firefox\n Firefox Incognito\n Cancel" | dmenu -i -p ' Run: ')" in
 		"龜 Firefox")          firefox;;
 		" Chrome")            google-chrome-stable;;
 		" Chrome Incognito")  google-chrome-stable --incognito;;

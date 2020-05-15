@@ -15,6 +15,12 @@ notify-send "'$CHOSEN' copied to clipboard."
 exit
 
 __DATA__
+🤷🏿‍♀️ Woman Shrugging: Dark Skin Tone
+🙃 upside-down face; U+1F643
+🤔 thinking face; U+1F914
+¯\_(ツ)_/¯ shruggie
+¯\\\_(ツ)_/¯ shruggie (markdown)
+
 😃 grinning face with big eyes; U+1F603
 😄 grinning face with smiling eyes; U+1F604
 😁 beaming face with smiling eyes; U+1F601
