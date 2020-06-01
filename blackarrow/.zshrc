@@ -66,11 +66,22 @@
 		alias      gzgs='cd ~/grandzonegaming/_site'
 		alias gzgserwer='cd ~/grandzonegaming && bundle exec jekyll serve --livereload --incremental'
 		alias  gzgbuild='cd ~/grandzonegaming && bundle exec jekyll build'
+		alias      gzgb='cd ~/grandzonegaming && bundle exec jekyll build'
+		alias    gzgben='cd ~/gzg-en && bundle exec jekyll build'
+		alias     gzgbs='gzgbuild && gzgs'
+		alias      gzgf='gzg && gitfull && gzgbs && gitf'
+		alias   gzgfull='gzg && gitfull && gzgbs && gitf'
+		alias      gzga='gzg && gitfull && gzgbs && gitf'
+		alias    gzgall='gzg && gitfull && gzgbs && gitf'
+
+	# Git #
+		alias    gitf='git add . && git commit && git push'
+		alias gitfull='git add . && git commit && git push'
 
 	# Vim #
-		alias  vi="nvim"
-		alias vim="nvim"
-		alias nvi="nvim"
+		alias  vi='nvim'
+		alias vim='nvim'
+		alias nvi='nvim'
 
 	# Grive #
 		alias dysk='cd ~/Pliki/grive && grive && cd -'

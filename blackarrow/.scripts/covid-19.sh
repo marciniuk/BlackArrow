@@ -6,32 +6,32 @@ case "$(printf " Poland \n New Zealand \n China \n Italy \n USA \n World " | dme
 	" Poland ")
 		place=" Poland "
 		currently="https://disease.sh/v2/countries/Poland"
-		yesterday="https://disease.sh/v2/countries/Poland?yesterday"
+		yesterday="https://disease.sh/v2/countries/Poland?yesterday=true&strict=true&allowNull=true"
 		;;
 	" New Zealand ")
 		place=" New Zealand "
 		currently="https://disease.sh/v2/countries/New%20Zealand"
-		yesterday="https://disease.sh/v2/countries/New%20Zealand?yesterday"
+		yesterday="https://disease.sh/v2/countries/New%20Zealand?yesterday=true&strict=true&allowNull=true"
 		;;
 	" China ")
 		place=" China "
 		currently="https://disease.sh/v2/countries/China"
-		yesterday="https://disease.sh/v2/countries/China?yesterday"
+		yesterday="https://disease.sh/v2/countries/China?yesterday=true&strict=true&allowNull=true"
 		;;
 	" Italy ")
 		place=" Italy "
 		currently="https://disease.sh/v2/countries/Italy"
-		yesterday="https://disease.sh/v2/countries/Italy?yesterday"
+		yesterday="https://disease.sh/v2/countries/Italy?yesterday=true&strict=true&allowNull=true"
 		;;
 	" USA ")
 		place=" USA "
 		currently="https://disease.sh/v2/countries/USA"
-		yesterday="https://disease.sh/v2/countries/USA?yesterday"
+		yesterday="https://disease.sh/v2/countries/USA?yesterday=true&strict=true&allowNull=true"
 		;;
 	" World ")
 		place=" World "
 		currently="https://disease.sh/v2/all"
-		yesterday="https://disease.sh/v2/all?yesterday"
+		yesterday="https://disease.sh/v2/all?yesterday=true&strict=true&allowNull=true"
 		;;
 	*)  exit 0;;
 esac
