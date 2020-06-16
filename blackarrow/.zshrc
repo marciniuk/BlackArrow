@@ -55,6 +55,13 @@
 ###########
 # Aliases #
 ###########
+	# KILLALL #
+		alias      ka='killall -I'
+		alias killall='killall -I'
+
+	# LS #
+		alias ls='ls --color=auto --group-directories-first'
+
 	# SSD #
 		alias  ssdinfo='sudo smartctl -a /dev/sda'
 		alias     ssdi='sudo smartctl -a /dev/sda'
