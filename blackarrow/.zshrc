@@ -55,6 +55,10 @@
 ###########
 # Aliases #
 ###########
+	# Update firmware #
+		alias  get-up='sudo fwupdmgr get-updates'
+		alias get-dev='sudo fwupdmgr get-devices'
+
 	# KILLALL #
 		alias      ka='killall -I'
 		alias killall='killall -I'
@@ -71,6 +75,7 @@
 	# GZG #
 		alias       gzg='cd ~/grandzonegaming'
 		alias      gzgs='cd ~/grandzonegaming/_site'
+		alias      gzgp='cd ~/grandzonegaming/pages'
 		alias gzgserwer='cd ~/grandzonegaming && bundle exec jekyll serve --livereload --incremental'
 		alias  gzgbuild='cd ~/grandzonegaming && bundle exec jekyll build'
 		alias      gzgb='cd ~/grandzonegaming && bundle exec jekyll build'
