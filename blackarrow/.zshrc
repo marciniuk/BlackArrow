@@ -72,6 +72,13 @@
 		alias ssdclear='sudo fstrim / && sudo fstrim /boot'
 		alias     ssdc='sudo fstrim / && sudo fstrim /boot'
 
+	# Marcini.uk #
+		alias       muk='cd ~/marcini.uk'
+		alias      muks='cd ~/marcini.uk/_site'
+		alias      mukp='cd ~/marcini.uk/pages'
+		alias mukserwer='cd ~/marcini.uk && bundle exec jekyll serve --livereload --incremental'
+		alias  mukbuild='cd ~/marcini.uk && bundle exec jekyll build'
+
 	# GZG #
 		alias       gzg='cd ~/grandzonegaming'
 		alias      gzgs='cd ~/grandzonegaming/_site'

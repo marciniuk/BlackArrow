@@ -1,0 +1,17 @@
+# configuration file for betterlockscreen
+
+insidecolor=C4682520
+ringcolor=ccccccff
+keyhlcolor=367DC9ff
+bshlcolor=367DC9ff
+separatorcolor=00000000
+insidevercolor=2AA356ff
+insidewrongcolor=B81C1Cff
+ringvercolor=ccccccff
+ringwrongcolor=ccccccff
+verifcolor=ccccccff
+timecolor=ccccccff
+datecolor=ccccccff
+loginbox=181B2166
+font="sans-serif"
+locktext='Wbisz hasło albo wypierdalaj'

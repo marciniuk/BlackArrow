@@ -61,7 +61,7 @@ monitor-strict   = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 modules-left   = i3
 modules-center =
-modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym coreuse temperature memory compton updates-arch-aur
+modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym coreuse temperature memory picom updates-arch-aur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;tray-position	= right
@@ -165,6 +165,16 @@ animation-packetloss-0-foreground = ${colors.moderate}
 animation-packetloss-1-foreground = ${colors.urgent}
 animation-packetloss-framerate    = 500
 
+;~~~~~~~~~~~
+; Bluetooth
+;~~~~~~~~~~~
+[module/bluetooth]
+type = custom/script
+
+exec = ~/.scripts/bluetooth.sh
+click-left = blueman-manager
+;click-right = ~/.scripts/bluetooth-toggle.sh
+interval = 5
 
 ;~~~~~~~~~~~~~~~~
 ; Volume / Audio
@@ -403,86 +413,6 @@ label         = %{A1:termite -e "htop -s PERCENT_MEM" & disown:} %percentage_
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Don't use ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;~~~~~~~~~~~
-; Powermenu
-;~~~~~~~~~~~
-[module/powermenu]
-type = custom/menu
-
-label-open          = 
-label-open-padding  = 1
-label-close         = " "
-label-close-padding = 0
-
-menu-0-0         = 
-menu-0-0-exec    = exit
-menu-0-0-padding = 0
-
-menu-0-1         = 
-menu-0-1-exec    = menu-open-1
-menu-0-1-padding = 1
-menu-1-0         = Lock?
-menu-1-0-exec    = i3lock -i /usr/share/backgrounds/i3lock.png
-menu-1-0-padding = 0
-menu-1-1         = 
-menu-1-1-exec    = exit
-menu-1-1-padding = 1
-
-menu-0-2         = 
-menu-0-2-exec    = menu-open-2
-menu-0-2-padding = 0
-menu-2-0         = Power off?
-menu-2-0-exec    = systemctl -i poweroff
-menu-2-0-padding = 0
-menu-2-1         = 
-menu-2-1-exec    = exit
-menu-2-1-padding = 1
-
-menu-0-3         = 
-menu-0-3-exec    = menu-open-3
-menu-0-3-padding = 1
-menu-3-0         = Reboot?
-menu-3-0-exec    = reboot
-menu-3-0-padding = 0
-menu-3-1         = 
-menu-3-1-exec    = exit
-menu-3-1-padding = 1
-
-menu-0-4         = 
-menu-0-4-exec    = menu-open-4
-menu-0-4-padding = 0
-menu-4-0         = Logout?
-menu-4-0-exec    = i3-msg exit
-menu-4-0-padding = 0
-menu-4-1         = 
-menu-4-1-exec    = exit
-menu-4-1-padding = 1
-
-menu-0-5         = 
-menu-0-5-exec    = menu-open-5
-menu-0-5-padding = 1
-menu-5-0         = Suspend?
-menu-5-0-exec    = systemctl suspend
-menu-5-0-padding = 0
-menu-5-1         = 
-menu-5-1-exec    = exit
-menu-5-1-padding = 1
-
-
-;~~~~~~~~~~~~~~~~~
-; Keyboard Layout
-;~~~~~~~~~~~~~~~~~
-[module/keyboard]
-type = internal/xkeyboard
-
-blacklist-0             = scroll lock
-format                  = <label-layout> <label-indicator>
-format-spacing          = 0
-label-layout            =  %layout%
-label-indicator         = %name%
-label-indicator-padding = 2
-
-
 ;~~~~~~~~~~~~
 ; Filesystem
 ;~~~~~~~~~~~~
@@ -496,54 +426,6 @@ interval                 = 1200
 fixed-values             = false
 spacing                  = 2
 label-mounted-foreground = $foreground
-
-
-;~~~~~~~~~~~~
-; MPD Player
-;~~~~~~~~~~~~
-[module/mpd]
-type = internal/mpd
-
-format-online        = <bar-progress>  <icon-prev> <icon-stop> <toggle> <icon-next>  <label-song>
-format-offline       = <label-offline>
-bar-progress-format  = %{+o +u}%fill%%{-o -u}%indicator%%{+o +u}%empty%%{-u -o}
-label-offline        =
-format-online-prefix = " "
-
-icon-play   = 
-icon-pause  = 
-icon-stop   = 
-icon-prev   = 
-icon-next   = 
-icon-random = 
-icon-repeat = 
-
-toggle-on-foreground  =
-toggle-off-foreground = #55
-
-bar-progress-width                = 35
-bar-progress-indicator            = █
-bar-progress-fill                 = █
-bar-progress-empty                = ▒
-bar-progress-empty-font           = 2
-bar-progress-indicator-font       = 2
-bar-progress-fill-font            = 2
-bar-progress-fill-foreground      = #bb
-bar-progress-empty-foreground     = #44
-bar-progress-indicator-foreground = #A85659
-
-
-;~~~~~~~~~~~~~~~~~~~~~~~~~~
-; Wired Network / Ethernet
-;~~~~~~~~~~~~~~~~~~~~~~~~~~
-[module/wired-network]
-type = internal/network
-
-interface                   =
-format-connected            = <label-connected>
-format-disconnected         = <label-disconnected>
-label-connected             =  %local_ip%
-format-connected-foreground	= ${colors.foreground}
 
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -563,10 +445,10 @@ click-right = yes | LC_ALL=en_US.UTF-8 yay |& tee -a ~/.yay-log/"$(date +%Y-%m-%
 interval    = 600
 
 
-;~~~~~~~~~
-; Compton
-;~~~~~~~~~
-[module/compton]
+;~~~~~~~
+; Picom
+;~~~~~~~
+[module/picom]
 type = custom/script
 
 exec       = ~/.scripts/picom.sh
@@ -618,32 +500,6 @@ type = custom/script
 exec       = echo " "
 label      = %output%
 click-left = i3 restart
-
-
-;~~~~~~~~~~~~~~~
-; set backlight
-;~~~~~~~~~~~~~~~
-[module/backlightSET]
-type = custom/script
-
-exec        = echo " "
-label       = %output%
-click-left  = light -S 100
-click-right = light -S 10
-
-[module/backlightUP]
-type = custom/script
-
-exec       = echo " "
-label      = %output%
-click-left = light -A 100
-
-[module/backlightDOWN]
-type = custom/script
-
-exec       = echo " "
-label      = %output%
-click-left = light -U 100 && sleep 0,2 && light -A 10
 
 
 ;~~~~~

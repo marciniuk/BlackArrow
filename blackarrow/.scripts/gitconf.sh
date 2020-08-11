@@ -57,6 +57,7 @@ Data=$(date +%G-%m-%d\ %H:%M:%S)
 	cp -r ~/.config/gtk-3.0 ~/BlackArrowGit/blackarrow/.config/
 	cp -r /usr/lib/sddm ~/BlackArrowGit/blackarrow/
 	cp -r /usr/share/sddm/themes/chili/ ~/BlackArrowGit/blackarrow/
+	cp ~/.config/betterlockscreenrc ~/BlackArrowGit/blackarrow/.config/
 	cp ~/.config/picom.conf ~/BlackArrowGit/blackarrow/.config/
 	cp /etc/X11/xorg.conf.d/30-touchpad.conf ~/BlackArrowGit/blackarrow/
 	cp /etc/systemd/logind.conf ~/BlackArrowGit/blackarrow/

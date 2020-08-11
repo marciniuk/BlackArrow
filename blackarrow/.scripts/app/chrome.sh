@@ -2,18 +2,19 @@
 
 if pgrep -x chrome
 then
-	case "$(printf " Yes\n No" | dmenu -i -p 'Do you want to open another window?')" in
-		" Yes") case "$(printf " Chrome\n Chrome Incognito\n Cancel" | dmenu -i -p ' Run: ')" in
-		         	" Chrome")           google-chrome-stable --force-dark-mode;;
-		         	" Chrome Incognito") google-chrome-stable --incognito --force-dark-mode;;
-		         	*)                    exit 0
-		         esac;;
-		*) exit 0
-	esac
+  case "$(printf " Yes\n No" | dmenu -i -p 'Do you want to open another window?')" in
+     " Yes")
+       case "$(printf " Chrome\n Chrome Incognito\n Cancel" | dmenu -i -p ' Run: ')" in
+          " Chrome")           google-chrome-stable --force-dark-mode;;
+          " Chrome Incognito") google-chrome-stable --incognito --force-dark-mode;;
+          *)                    exit 0
+       esac;;
+    *) exit 0
+  esac
 else
-	case "$(printf " Chrome\n Chrome Incognito\n Cancel" | dmenu -i -p ' Run: ')" in
-		" Chrome")           google-chrome-stable --force-dark-mode;;
-		" Chrome Incognito") google-chrome-stable --incognito --force-dark-mode;;
-		*)                    exit 0
-	esac
+  case "$(printf " Chrome\n Chrome Incognito\n Cancel" | dmenu -i -p ' Run: ')" in
+     " Chrome")           google-chrome-stable --force-dark-mode;;
+     " Chrome Incognito") google-chrome-stable --incognito --force-dark-mode;;
+     *)                    exit 0
+  esac
 fi

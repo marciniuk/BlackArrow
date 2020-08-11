@@ -2,7 +2,7 @@
 #   _ _____
 #  (_)___ /        __ _  __ _ _ __  ___
 #  | | |_ \ _____ / _` |/ _` | '_ \/ __|
-#  | |___) |_____| (_| | (_| | |_) \__ \ 
+#  | |___) |_____| (_| | (_| | |_) \__ \
 #  |_|____/       \__, |\__,_| .__/|___/
 #                 |___/      |_|
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -122,6 +122,9 @@
 	# If you have a numpad you may want to enable this #
 		exec_always --no-startup-id numlockx on
 
+	# Gamma #
+		exec --no-startup-id xgamma -rgamma 1.15 -ggamma 1.15 -bgamma 1.175
+
 	# X11 Compositor #
 		exec --no-startup-id picom -b --config .config/picom.conf
 
@@ -172,18 +175,26 @@
 		bindsym Print exec --no-startup-id ~/.scripts/screenshot.sh
 
 	# Audio - XF86 bindings #
-		bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
-		bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 		bindsym XF86AudioMute        exec --no-startup-id pamixer -t
-		bindsym XF86AudioPlay        exec --no-startup-id playerctl play-pause
+		bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+		bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+		bindsym XF86AudioMicMute     exec --no-startup-id amixer set Capture toggle
+
+		bindsym XF86AudioPause       exec --no-startup-id playerctl pause
+		bindsym XF86AudioPlay        exec --no-startup-id playerctl play
 		bindsym XF86AudioNext        exec --no-startup-id playerctl next
 		bindsym XF86AudioPrev        exec --no-startup-id playerctl previous
 		bindsym XF86AudioStop        exec --no-startup-id playerctl stop
 
 	# Backlight - XF86 bindings #
-		bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 10
 		bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+		bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 10
 
+	# Camera -  XF86 bindings #
+		bindsym XF86Display exec --no-startup-id mpv /dev/video0
+
+	# Control - XF86 bindings #
+		bindsym XF86Tools exec --no-startup-id ~/.scripts/configuration.sh
 
 ######################
 # Workspace Bindings #
@@ -335,23 +346,23 @@
 # Key Bindings (scripts) #
 ##########################
 	bindsym $Mod+$Moe+d exec --no-startup-id ~/.scripts/dysk.sh
-	bindsym $Mod+$Moe+c exec --no-startup-id ~/.scripts/configuration.sh
 #	bindsym $Mod+$Moe+c exec --no-startup-id ~/.scripts/compton.sh --toggle
-	bindsym $Mod+$Moe+v exec --no-startup-id ~/.scripts/files.sh
+	bindsym $Mod+$Moe+n exec --no-startup-id termite -e "nvim \"$(xclip -o -selection clipboard)\""
 	bindsym $Mod+$Moe+w exec --no-startup-id ~/.scripts/wallpaper.sh
 	bindsym $Mod+$Moe+e exec --no-startup-id ~/.scripts/unicode.sh
+	bindsym $Mod+$Moe+g exec --no-startup-id ~/.scripts/dmenu-gamma.sh
 	bindsym $Mod+$Moe+a exec --no-startup-id ~/.scripts/fawesome.sh
 	bindsym $Mod+$Moe+b exec --no-startup-id ~/.scripts/backlight.sh
 	bindsym $Mod+$Moe+f exec --no-startup-id ~/.scripts/fast-cleaning.sh
 	bindsym $Mod+$Moe+k exec --no-startup-id ~/.scripts/covid-19.sh
-	bindsym $Mod+c      exec --no-startup-id ~/.scripts/app/clipmenu.sh
-
+	bindsym $Mod+$Moe+c exec --no-startup-id ~/.scripts/app/clipmenu.sh
 
 
 #########################
 # Applications Bindings #
 #########################
 	bindsym $Mod+Return  exec $terminal
+	bindsym $Mod+c       exec --no-startup-id ~/.scripts/app/chrome.sh
 	bindsym $Mod+f       exec --no-startup-id ~/.scripts/app/firefox.sh
 	bindsym $Mod+t       exec --no-startup-id telegram-desktop
 	bindsym $Moe+w       exec --no-startup-id networkmanager_dmenu

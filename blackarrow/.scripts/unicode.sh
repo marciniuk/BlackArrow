@@ -18,6 +18,7 @@ __DATA__
 🤷🏿‍♀️ Woman Shrugging: Dark Skin Tone
 🙃 upside-down face; U+1F643
 🤔 thinking face; U+1F914
+😎 smiling face with sunglasses; U+1F60E
 ¯\_(ツ)_/¯ shruggie
 ¯\\\_(ツ)_/¯ shruggie (markdown)
 
@@ -79,7 +80,6 @@ __DATA__
 🤯 exploding head; U+1F92F
 🤠 cowboy hat face; U+1F920
 🥳 partying face; U+1F973
-😎 smiling face with sunglasses; U+1F60E
 🤓 nerd face; U+1F913
 🧐 face with monocle; U+1F9D0
 😕 confused face; U+1F615
