@@ -11,6 +11,7 @@ dmenu.selforeground : #14171F
 ! black
 *.color0:     #181B21
 *.color8:     #22262E
+*.color16:    #38404d
 
 ! red
 *.color1:     #B81C1C
