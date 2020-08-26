@@ -29,7 +29,7 @@ filter_unmatched_urls = true
 [colors]
 # special
 background = #181B21
-#background = rgba(7, 7, 35, 0.8)
+#background = rgba(24, 27, 33, 0.95)
 foreground = #CCCCCC
 
 # black

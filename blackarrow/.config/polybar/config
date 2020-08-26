@@ -61,7 +61,7 @@ monitor-strict   = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 modules-left   = i3
 modules-center =
-modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym coreuse temperature memory picom updates-arch-aur
+modules-right  = covid-19 wireless-network sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym fastcpu coreuse temperature memory picom updates-arch-aur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;tray-position	= right
@@ -348,11 +348,18 @@ animation-charging-framerate = 750
 ;~~~~~~~~~
 ; CPU use
 ;~~~~~~~~~
+[module/fastcpu]
+type = custom/script
+
+interval = 5
+exec  = ~/.scripts/fast.sh
+label = %{F#B81C1C}%output%
+
 [module/coreuse]
 type = internal/cpu
 
 interval        = 3
-format-padding  = 1
+format-padding  = 0
 format          = <label>
 label           = %{A1:termite -e "./.scripts/cpuinfo.sh" & disown:}%percentage:2%%%{A}
 ramp-coreload-0 = ▂
