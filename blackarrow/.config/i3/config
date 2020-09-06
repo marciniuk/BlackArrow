@@ -369,7 +369,7 @@
 	bindsym $Mod+p       exec --no-startup-id ~/.scripts/app/applications.sh thunar
 	bindsym $Mod+s       exec --no-startup-id ~/.scripts/app/AppForS.sh
 	bindsym $Mod+g       exec --no-startup-id ~/.scripts/app/now-open.sh gimp
-	bindsym $Mod+b       exec --no-startup-id ~/.scripts/app/books.sh
+	bindsym $Mod+b       exec --no-startup-id calibre
 	bindsym $Moe+Shift+p exec --no-startup-id com.github.ronnydo.colorpicker
 	bindsym $Mod+k       exec --no-startup-id gnome-calculator
 
