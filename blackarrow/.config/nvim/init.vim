@@ -1,11 +1,14 @@
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "                         _
 "   _ __   ___  _____   _(_)_ __ ___
-"  | '_ \ / _ \/ _ \ \ / / | '_ ` _ \ 
+"  | '_ \ / _ \/ _ \ \ / / | '_ ` _ \
 "  | | | |  __/ (_) \ V /| | | | | | |
 "  |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 "
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+" markdown
+let g:polyglot_disabled = ['markdown']
 
 " Load vim-plug for plugins
 call plug#begin('~/.config/nvim/bundle')
@@ -63,18 +66,13 @@ set smartcase
 set background=light
 
 augroup langindentation
+  autocmd InsertEnter *.{markdown,md} set conceallevel=0
   autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
   autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
   autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
   autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
   autocmd Filetype json setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
   autocmd Filetype scss setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-augroup END
-
-augroup pencil
-	autocmd!
-	autocmd FileType markdown call pencil#init({'wrap': 'soft', 'autoformat': 1})
-	autocmd FileType tex call pencil#init({'wrap': 'soft', 'autoformat': 1})
 augroup END
 
 " Colorscheme
@@ -138,10 +136,7 @@ hi ALEWarning       ctermbg=1   ctermfg=0
 hi ALEErrorSign     ctermbg=1   ctermfg=0
 
 let g:ale_linters = {
-\   'c':          ['ccls', 'clang'],
-\   'cpp':        ['clang'],
 \   'javascript': ['eslint'],
-\   'php':        ['php'],
 \   'python':     ['pyls', 'flake8'],
 \   'sh':         ['shellcheck'],
 \   'vim':        ['vint'],
@@ -149,14 +144,10 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   'sh':         ['shfmt'],
 \   '*':          ['trim_whitespace'],
-\   'c':          ['clang-format'],
-\   'cpp':        ['clang-format'],
 \   'css':        ['prettier'],
-\   'go':         ['gofmt'],
 \   'html':       ['prettier'],
 \   'javascript': ['prettier'],
 \   'json':       ['prettier'],
-\   'php':        ['prettier'],
 \   'python':     ['black'],
 \   'scss':       ['prettier'],
 \   'yaml':       ['prettier'],
@@ -176,9 +167,6 @@ let g:indentLine_color_term = 8
 " vim-pencil
 let g:pencil#textwidth = 88
 let g:pencil#wrapModeDefault = 'soft'
-
-" vim-polygot
-let g:polyglot_disabled = ['markdown']
 
 " Disable changing cursor to line
 set guicursor=

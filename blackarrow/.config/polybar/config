@@ -382,7 +382,7 @@ type = internal/temperature
 
 interval         = 3
 thermal-zone     = 0
-warn-temperature = 75
+warn-temperature = 80
 format           = <ramp><label>
 format-padding   = 1
 label            = %{A1:termite -e "watch sensors" & disown:} %temperature-c%%{A}
@@ -397,7 +397,7 @@ ramp-6 = ""
 
 ramp-6-foreground     = ${colors.urgent}
 format-warn           = <label-warn>
-label-warn            = " %temperature-c%"
+label-warn            = %{A1:termite -e "watch sensors" & disown:} %temperature-c%%{A}
 label-warn-padding    = 1
 label-warn-foreground = ${colors.urgent}
 
