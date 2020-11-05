@@ -60,7 +60,7 @@ monitor-strict   = false
 
 modules-left   = i3
 modules-center =
-modules-right  = covid-19 wireless-network sym4 bluetooth sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym fastcpu coreuse temperature memory picom updates-arch-aur
+modules-right  = covid-19 wireless-network sym4 bluetooth sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym fastcpu coreuse cpu-turbo temperature memory picom updates-arch-aur
 
 ;tray-position	= right
 ;tray-padding	= 2
@@ -170,7 +170,7 @@ animation-packetloss-framerate    = 500
 type = custom/script
 
 exec = ~/.scripts/bluetooth.sh
-click-left = blueman-manager
+click-left = ~/.scripts/blueman-manager.sh & exit
 click-right = ~/.scripts/bluetooth-toggle.sh
 interval = 5
 
@@ -373,6 +373,14 @@ ramp-coreload-3-foreground = ${colors.foreground}
 ramp-coreload-4-foreground = ${colors.foreground}
 ramp-coreload-5-foreground = ${colors.urgent}
 
+[module/cpu-turbo]
+type = custom/script
+
+exec     = ~/.scripts/cpu-turbo.sh
+label    = %{F#C62D3F}%output%
+interval = 5
+
+; click-right = "echo "0" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
 
 ;~~~~~~~~~~~~~~~~~
 ; CPU Temperature
@@ -410,8 +418,8 @@ type = internal/memory
 
 interval      = 3
 format        = <label>
-label-padding = 1
-label         = %{A1:termite -e "htop -s PERCENT_MEM" & disown:} %percentage_used%%%{A}
+label-padding = 0
+label         = "%{A1:termite -e "htop -s PERCENT_MEM" & disown:} %percentage_used%%%{A} "
 
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

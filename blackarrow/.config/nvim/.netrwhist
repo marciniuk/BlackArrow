@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/adrian/.fzf'
 let g:netrw_dirhist_6='/home/adrian/.yay-log/seen'
 let g:netrw_dirhist_5='/home/adrian/.config/gtk-3.0'
 let g:netrw_dirhist_4='/home/adrian/grandzonegaming/_includes'

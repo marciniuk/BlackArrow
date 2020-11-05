@@ -147,6 +147,8 @@
 		exec --no-startup-id setxkbmap pl -option 'caps:ctrl_modifier'
 		exec --no-startup-id xcape -e 'Caps_Lock=Escape'
 
+	# TrackPad
+		exec --no-startup-id xinput --set-prop 13 'libinput Accel Speed' -0.8
 
 #################
 #  Key Bindings #

@@ -27,18 +27,18 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'https://github.com/ap/vim-css-color'
 	Plug 'https://github.com/SirVer/ultisnips'
 		Plug 'https://github.com/honza/vim-snippets'
-	Plug 'https://github.com/romainl/vim-cool'
 	Plug 'https://github.com/tpope/vim-commentary'
 	Plug 'https://github.com/jelera/vim-javascript-syntax'
-	Plug 'https://github.com/matze/vim-meson'
-	Plug 'https://github.com/tpope/vim-surround'
-	Plug 'https://github.com/reedes/vim-pencil'
 	Plug 'https://github.com/sheerun/vim-polyglot'
 	Plug 'https://github.com/bronson/vim-trailing-whitespace'
-	Plug 'https://github.com/junegunn/goyo.vim'
 	Plug 'https://github.com/PotatoesMaster/i3-vim-syntax'
 	Plug 'https://github.com/Yggdroot/indentLine'
-	Plug 'https://github.com/tommcdo/vim-lion'
+	Plug 'https://github.com/romainl/vim-cool'
+    " Plug 'https://github.com/junegunn/goyo.vim'
+    " Plug 'https://github.com/reedes/vim-pencil'
+	" Plug 'https://github.com/tommcdo/vim-lion'
+	" Plug 'https://github.com/matze/vim-meson'
+	" Plug 'https://github.com/tpope/vim-surround'
 	" Plug 'https://github.com/tpope/vim-speeddating'
 	" Plug 'https://github.com/cespare/vim-toml'
 	" Plug 'https://github.com/tpope/vim-repeat'
@@ -202,8 +202,8 @@ map <F5> :setlocal spell! spelllang=en_us<CR>
 map <F6> :setlocal spell! spelllang=pl<CR>
 
 " Toggle Goyo, distraction free mode
-map <F8> :Goyo<CR>
+" map <F8> :Goyo<CR>
 
 " Toggle Pencil, wrapping text
-map <F9> :PencilSoft<CR>
-map <F10> :PencilHard<CR>
+" map <F9> :PencilSoft<CR>
+" map <F10> :PencilHard<CR>
