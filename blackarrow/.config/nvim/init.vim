@@ -12,7 +12,6 @@ let g:polyglot_disabled = ['markdown']
 
 " Load vim-plug for plugins
 call plug#begin('~/.config/nvim/bundle')
-
 	Plug 'https://github.com/w0rp/ale'
 	Plug 'https://github.com/Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 		Plug 'https://github.com/carlitux/deoplete-ternjs'

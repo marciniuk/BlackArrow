@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/adrian/.config/gsimplecal'
+let g:netrw_dirhist_8='/home/adrian/.config/termite'
 let g:netrw_dirhist_7='/home/adrian/.fzf'
 let g:netrw_dirhist_6='/home/adrian/.yay-log/seen'
 let g:netrw_dirhist_5='/home/adrian/.config/gtk-3.0'

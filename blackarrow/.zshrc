@@ -31,8 +31,8 @@
 # Bundles #
 ###########
 	antigen bundle git
-	antigen bundle heroku
-	antigen bundle lein
+	# antigen bundle heroku
+	# antigen bundle lein
 	antigen bundle command-not-found
 	antigen bundle vi-mode
 	antigen bundle zsh-users/zsh-syntax-highlighting
