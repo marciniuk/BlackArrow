@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=oomox-Ventisangel_GTK-dark-compact
+Comment=A Material Design theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=oomox-Ventisangel_GTK-dark-compact
+MetacityTheme=oomox-Ventisangel_GTK-dark-compact
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24

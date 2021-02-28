@@ -60,7 +60,7 @@ monitor-strict   = false
 
 modules-left   = i3
 modules-center =
-modules-right  = covid-19 sym4 wireless-network sym4 bluetooth sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym fastcpu coreuse cpu-turbo temperature memory picom updates-arch-aur
+modules-right  = covid-19 sym4 wireless-network downnet sym4 bluetooth sym volume sym4 backlight backlight-menu sym2 clock sym2 battery0 battery1 sym fastcpu coreuse cpu-turbo temperature memory picom updates-arch-aur
 
 ;tray-position	= right
 ;tray-padding	= 2
@@ -472,6 +472,16 @@ label      = %output%
 interval   = 5
 click-left = ~/.scripts/picom.sh --toggle && xdotool key "super+bracketright"
 
+
+;~~~~~~~~~
+; DownNet
+;~~~~~~~~~
+[module/downnet]
+type = custom/script
+
+exec = sh ~/.scripts/downnet.sh
+label = "  %output%"
+interval = 5
 
 ;~~~~~~~~~~~~~~~~
 ; Volume-menu
