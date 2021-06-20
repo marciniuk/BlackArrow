@@ -62,7 +62,7 @@
 #########
 	EDITOR=nvim
 	TERMINAL=termite
-	BROWSER=google-chrome
+	BROWSER=/usr/bin/google-chrome-stable
 	neofetch --color_blocks off | lolcat
 
 	prompt_context() {

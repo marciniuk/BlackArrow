@@ -6,6 +6,8 @@ gb=$(echo "scale=2; ($wifi+$eth)/1024/1024/1024" | bc -l)
 mb=$(echo "scale=0; ($wifi+$eth)/1024/1024" | bc -l)
 
 case "$(printf "$gb%s" | wc -m)" in
-  3) echo "$mb"MB;;
-  *) echo "$gb"GB;;
+  3) echo "$mb"MB
+  ;;
+  *) echo "$gb"GB
+  ;;
 esac

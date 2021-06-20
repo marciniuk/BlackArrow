@@ -341,9 +341,9 @@
 	for_window [class="Gnome-calculator"] floating toggle
 
 
-##########################
-# Key Bindings (scripts) #
-##########################
+####################
+# Scripts Bindings #
+####################
 #	bindsym $Mod+$Moe+c exec --no-startup-id ~/.scripts/compton.sh --toggle
 	bindsym $Mod+$Moe+n exec --no-startup-id termite -e "nvim \"$(xclip -o -selection clipboard)\""
 	bindsym $Mod+$Moe+w exec --no-startup-id ~/.scripts/wallpaper.sh
@@ -371,7 +371,7 @@
 	bindsym $Mod+b       exec --no-startup-id calibre
 	bindsym $Moe+Shift+p exec --no-startup-id com.github.ronnydo.colorpicker
 	bindsym $Mod+k       exec --no-startup-id gnome-calculator
-    bindsym $Mod+m       exec --no-startup-id minecraft-launcher
+    bindsym $Mod+m       exec --no-startup-id xdotool key "super+8" && minecraft-launcher
 
 
 #########################

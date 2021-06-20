@@ -481,7 +481,7 @@ type = custom/script
 
 exec = sh ~/.scripts/downnet.sh
 label = "  %output%"
-interval = 5
+interval = 60
 
 ;~~~~~~~~~~~~~~~~
 ; Volume-menu

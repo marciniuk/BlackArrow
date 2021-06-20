@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/adrian/.yay-log/seen'
+let g:netrw_dirhist_5='/etc/sddm.conf.d'
+let g:netrw_dirhist_4='/home/adrian/.yay-log/seen'
+let g:netrw_dirhist_3='/home/adrian/.config/dunst'
 let g:netrw_dirhist_2='/home/adrian/.yay-log/seen'
 let g:netrw_dirhist_1='/home/adrian/mc'
 let g:netrw_dirhist_0='/etc/X11/xorg.conf.d'
 let g:netrw_dirhist_9='/home/adrian/.config/gsimplecal'
 let g:netrw_dirhist_8='/home/adrian/.config/termite'
 let g:netrw_dirhist_7='/home/adrian/.fzf'
-let g:netrw_dirhist_6='/home/adrian/.yay-log/seen'
-let g:netrw_dirhist_5='/home/adrian/.config/gtk-3.0'
-let g:netrw_dirhist_4='/home/adrian/grandzonegaming/_includes'
-let g:netrw_dirhist_3='/home/adrian/gzghp'
